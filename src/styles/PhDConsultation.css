@@ -1,0 +1,168 @@
+.consultation-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 1100px;
+  margin: auto;
+  animation: fadeIn 1.2s ease-in-out;
+  flex-wrap: wrap; /* Allows stacking in smaller screens */
+}
+
+/* Left Side */
+.left-section {
+  position: relative;
+  width: 50%;
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  color: white;
+  max-width: 90%;
+}
+
+.overlay-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.overlay-text p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Right Side */
+.right-section {
+  background: #fffaf0;
+  width: 50%;
+  padding: 40px;
+  border-radius: 0 20px 20px 0;
+}
+
+.right-section h3 {
+  color: #0a2540;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: none;
+  background: #fff3dc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px #f4c27f;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+button {
+  background: #0a2540;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+button:hover {
+  background: #103a66;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+  .consultation-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .left-section {
+    height: 250px; /* fixed height for image section */
+  }
+
+  .overlay-text {
+    bottom: 20px;
+    left: 15px;
+  }
+
+  .overlay-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .overlay-text p {
+    font-size: 0.85rem;
+  }
+
+  .right-section {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .overlay-text p {
+    font-size: 0.8rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+  }
+}

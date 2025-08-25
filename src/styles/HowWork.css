@@ -1,0 +1,131 @@
+.howwork-container {
+  text-align: center;
+  padding: 50px 5%;
+}
+
+.howwork-title {
+  font-size: 28px;
+  color: #13334C;
+  margin-bottom: 10px;
+  text-align: left; /* aligns text to the left */
+}
+
+.howwork-description {
+  color: #555;
+  margin-bottom: 40px;
+  text-align: left; /* aligns text to the left */
+}
+
+
+.howwork-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.howwork-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 180px;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.step-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.step-title {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.step-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.step-arrow {
+  font-size: 45px;
+  
+  color: #89898a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
+}
+
+
+/* Desktop view stays exactly the same */
+
+/* Tablet view (stack steps but keep arrows visible) */
+@media (max-width: 992px) {
+  .howwork-steps {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .howwork-step {
+    max-width: 200px;
+  }
+
+  .step-arrow {
+    display: none; /* Hide arrows on tablet for cleaner look */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+  .howwork-container {
+    padding: 30px 5%;
+  }
+
+  .howwork-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .howwork-description {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .howwork-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .howwork-step {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .step-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .step-title {
+    font-size: 15px;
+  }
+
+  .step-description {
+    font-size: 13px;
+  }
+
+  .step-arrow {
+    display: none; /* Arrows not needed in vertical layout */
+  }
+}

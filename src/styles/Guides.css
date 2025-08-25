@@ -1,0 +1,135 @@
+.phd-guides {
+  padding: 60px 60px;
+  font-family: Arial, sans-serif;
+ 
+}
+
+.phd-guides .section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0f1a34;
+}
+
+.phd-guides .section-subtitle {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 30px;
+  
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.guide-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.guide-card:hover {
+  border-color: #0066ff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.icon-wrapper {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #cea82e; /* orange-ish color for icons */
+}
+
+.guide-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.guide-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .phd-guides {
+    padding: 40px 30px;
+  }
+
+  .phd-guides .section-title {
+    font-size: 24px;
+  }
+
+  .phd-guides .section-subtitle {
+    font-size: 14px;
+  }
+
+  .guide-card {
+    padding: 18px;
+  }
+}
+
+/* Mobile (small screens) */
+@media (max-width: 768px) {
+  .phd-guides {
+    padding: 30px 20px;
+  }
+
+  .phd-guides .section-title {
+    font-size: 22px;
+  }
+
+  .phd-guides .section-subtitle {
+    font-size: 13px;
+  }
+
+  .guide-card {
+    padding: 16px;
+  }
+
+  .guide-card h3 {
+    font-size: 16px;
+  }
+
+  .guide-card p {
+    font-size: 13px;
+  }
+
+  .icon-wrapper {
+    font-size: 24px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .phd-guides {
+    padding: 20px 15px;
+  }
+
+  .phd-guides .section-title {
+    font-size: 20px;
+  }
+
+  .guide-card {
+    padding: 14px;
+  }
+
+  .guide-card h3 {
+    font-size: 15px;
+  }
+
+  .guide-card p {
+    font-size: 12px;
+  }
+
+  .icon-wrapper {
+    font-size: 22px;
+  }
+}

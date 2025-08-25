@@ -1,0 +1,136 @@
+.phd-section {
+  display: flex;
+  padding: 60px 80px;
+  font-family: 'Arial', sans-serif;
+}
+
+.phd-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.phd-content {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  justify-content: center;
+}
+
+.phd-image-wrapper {
+  position: relative;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.phd-image {
+  margin-left: 50px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.phd-border-line {
+  margin-left: 40px;
+  margin-top: 10px;
+  position: absolute;
+  width: 300px;
+  height: 380px;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.phd-border-line.line1 {
+  top: -30px;
+  left: -80px;
+  transform: rotate(30deg);
+}
+
+.phd-border-line.line2 {
+  top: -20px;
+  left: -60px;
+  transform: rotate(-30deg);
+}
+
+.phd-text {
+  margin-left: 30px;
+  color: #0f1c40;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.phd-text p {
+  margin-bottom: 16px;
+}
+
+.phd-heading {
+  text-align: left;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .phd-content {
+    gap: 50px;
+  }
+
+  .phd-image-wrapper {
+    width: 250px;
+  }
+
+  .phd-border-line {
+    width: 250px;
+    height: 320px;
+  }
+
+  .phd-text {
+    font-size: 15px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .phd-section {
+    padding: 40px 20px;
+  }
+
+  .phd-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .phd-image {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .phd-image-wrapper {
+    margin: 0 auto;
+    width: 220px;
+  }
+
+  .phd-border-line {
+    width: 210px;
+    height: 280px;
+    margin-left: 0;
+  }
+
+  .phd-text {
+    margin-left: 0;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .phd-heading {
+    text-align: center;
+  }
+}

@@ -1,0 +1,75 @@
+.container {
+  padding: 40px 20px;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #13334C;
+  margin-bottom: 16px;
+    margin-left: 30px;
+}
+
+.description2 {
+  color: #64748b;
+  margin-bottom: 24px;
+    margin-left: 30px;
+}
+
+/* Resources flex wrapper */
+.resources {
+  display: flex;
+  gap: 15px; /* reduced gap between cards */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  justify-content: center; /* center cards */
+}
+
+.resource-card {
+
+  border-radius: 8px;
+
+  overflow: hidden;
+  width: 370px;
+  text-align: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.resource-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.resource-title {
+  font-size: 18px;
+  font-weight: bold;
+  color:#13334C;
+  padding: 10px;
+  margin: 0;
+}
+
+.resource-date {
+  font-size: 12px;
+  color: #64748b;
+  padding: 0 10px 10px;
+  margin: 0;
+}
+
+.read-now {
+  display: block;
+  font-size: 14px;
+  color: #13334C;
+  text-decoration: none;
+  padding: 10px;
+}

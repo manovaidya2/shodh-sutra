@@ -1,0 +1,60 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Fonts & Body ===== */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* ===== Links ===== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* ===== Responsive Design ===== */
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Top bar stack */
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .top-links {
+    margin-top: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+
+ 
+
+
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .desc {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,101 @@
+/* Container */
+
+/* Content wrapper */
+.tes-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Title */
+.tes-title {
+  font-size: 24px;
+  font-weight: bold;
+  color:#13334C;
+  margin-bottom: 16px;
+}
+
+/* Description */
+.tes-description {
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+/* Testimonials wrapper as horizontal scroll */
+.tes-testimonials {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+/* Hide scrollbar */
+.tes-testimonials::-webkit-scrollbar {
+  display: none;
+}
+.tes-testimonials {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* -------------------- Single Card Class -------------------- */
+.testimonial-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 30px;
+  width: 380px;
+  flex: 0 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* stronger shadow */
+  text-align: left;
+  transition: box-shadow 0.3s ease; /* smooth shadow effect */
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* hover effect if you want */
+}
+
+
+/* Flex wrapper for image + name/title */
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+/* Stack name and title vertically */
+.testimonial-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image */
+.testimonial-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Name */
+.testimonial-name {
+  font-size: 18px;
+  font-weight: bold;
+  color:#13334C;
+  margin-bottom: 3px;
+}
+
+/* Title */
+.testimonial-title {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Text */
+.testimonial-text {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+}

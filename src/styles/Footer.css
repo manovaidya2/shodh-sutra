@@ -1,0 +1,151 @@
+/* Main Footer Container */
+.footer {
+  background-color: #7a8b98;
+  color: white;
+  padding: 40px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Footer Columns */
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 20px;
+}
+
+.footer .logo img {
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Headings */
+.footer h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Links */
+.footer a {
+  display: block;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.footer .social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #fcbf1e;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #6c7d8a;
+  font-size: 13px;
+}
+
+
+
+/* ========================= */
+/* 🔹 RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .footer {
+    padding: 40px 30px;
+    gap: 30px;
+  }
+
+  .footer-column {
+    min-width: 200px;
+  }
+
+  .footer h4 {
+    font-size: 15px;
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 13px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .footer p {
+    max-width: 100%;
+    margin-top: 50PX;
+  }
+
+  .footer .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .footer {
+    padding: 25px 15px;
+  }
+
+  .footer h4 {
+    font-size: 14px;
+  }
+
+  .footer a {
+    font-size: 12px;
+  }
+
+  .footer p {
+    font-size: 13px;
+  }
+
+  .footer .social-icons a {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

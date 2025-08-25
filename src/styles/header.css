@@ -1,0 +1,321 @@
+/* Top Bar */
+
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+}
+
+/* Top Bar (scrolls normally) */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fcbf1e;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 50px;
+  font-size: 14px;
+  color: #090909;
+  z-index: 1300; /* above header */
+  height: 40px;  /* fix height */
+}
+.contact-info span {
+  margin-right: 20px;
+}
+
+.top-links {
+  display: flex;
+  align-items: center;
+}
+
+.top-links a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.social-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+/* Sticky header with shadow */
+.header {
+  position: fixed;
+  top: 40px; /* same as .top-bar height */
+  left: 0;
+  width: 100%;
+  z-index: 1200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Push content down so it doesn't hide under top-bar + header */
+
+/* Mobile Slide-in Sidebar */
+.nav {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+/* ✅ Nav sidebar (mobile) */
+.nav {
+  position: fixed;
+  top: 0;
+  right: -100%; /* pehle hidden */
+  width: 250px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: right 0.4s ease-in-out; /* smooth slide */
+  z-index: 999;
+}
+
+.nav.open {
+  right: 0; /* open hone par dikh jaye */
+}
+
+
+  .nav a {
+    margin: 18px 0;
+    font-size: 16px;
+    color: #111;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav a:hover {
+    color: #fcbf1e;
+  }
+
+  /* Dropdown inside mobile */
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 15px;
+  }
+}
+
+/* Close Button */
+.close-btn {
+  display: none;
+}
+@media (max-width: 768px) {
+.close-btn {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Overlay behind sidebar */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: -0; }
+  to { opacity: 1; }
+}
+}
+.logo img {
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.apply-btn {
+  padding: 10px 20px;
+  border: 2px solid #000;
+  background-color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  color: black;
+}
+
+.apply-btn:hover {
+  background-color: #fcbf1e;
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Hide top bar on mobile */
+  .top-bar {
+    display: none;
+  }
+
+  .header {
+    padding: 10px 20px;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Show hamburger icon on left */
+  .menu-icon {
+    display: block;
+    order: 1;
+  }
+
+  /* Logo in center */
+  .logo {
+    order: 2;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+
+  /* Apply Now on right */
+  .apply-btn {
+    color: #000;
+    order: 3;
+    font-size: 12px;
+    padding: 8px 15px;
+    width: 100px;
+  }
+
+  /* Nav menu styles for mobile */
+  .nav {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    margin: 10px 0;
+  }
+}
+
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu a {
+  padding: 8px 15px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Mobile Slide-in Menu */
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden initially */
+    height: 100%;
+    width: 250px;
+    background: #fff;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  }
+
+  .nav.open {
+    right: 0; /* Slide in */
+  }
+
+  .nav a {
+    margin: 15px 0;
+    font-size: 16px;
+  }
+
+  /* Dropdown in Mobile */
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 15px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}
+.close-btn {
+  display: none; /* Hidden by default (desktop) */
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff; /* or your preferred color */
+  z-index: 1001;
+}
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .close-btn {
+    display: block;
+    color: #000;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    top: 0;              /* No top-bar, so stick to very top */
+    position: fixed;     /* keep it fixed */
+    padding: 10px 20px;
+  }
+
+  body {
+    padding-top: 70px;   /* adjust based on mobile header height */
+  }
+}

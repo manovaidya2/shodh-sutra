@@ -1,0 +1,96 @@
+.apply-container {
+
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 100px;
+  
+}
+
+/* Header */
+.apply-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.apply-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.apply-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Info Section */
+.apply-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.apply-info h2 {
+  font-size: 28px;
+  color: #444;
+  margin-bottom: 15px;
+}
+.apply-info p {
+  color: #666;
+  line-height: 1.6;
+}
+.info-right {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.info-right h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.info-right ul {
+  padding-left: 20px;
+  color: #555;
+}
+.info-right ul li {
+  margin-bottom: 8px;
+}
+
+/* PhD Section */
+.apply-phd {
+  margin-bottom: 60px;
+}
+
+/* CTA Section */
+.apply-cta {
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #4a90e2, #6c63ff);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+.apply-cta h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.apply-cta p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.apply-cta button {
+  padding: 12px 28px;
+  background: #fff;
+  color: #4a90e2;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.apply-cta button:hover {
+  background: #f1f1f1;
+}

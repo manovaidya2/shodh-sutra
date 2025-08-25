@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  background-image: url("../images/Hero.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 600px; /* desktop default */
+  padding: 60px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 140px 20px 20px; /* desktop me margin-top 140px */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.highlight {
+  color: #fcbf1e;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.hero h1 {
+  font-size: 2.8rem; /* desktop ka size same */
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.hero h1 span {
+  color: #fcbf1e;
+}
+
+.desc {
+  font-size: 1.1rem; /* desktop same */
+  line-height: 1.5;
+  margin-bottom: 35px;
+  color: #dcdcdc;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 2px solid white;
+  padding: 8px 8px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
+  width: 60%; /* desktop same */
+  max-width: 500px;
+}
+
+.search-icon {
+  margin-left: 15px;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.view-btn {
+  background-color: #fcbf1e;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #e0a800;
+}
+
+/* 📱 Mobile (up to 576px) */
+@media (max-width: 576px) {
+  .hero {
+    margin-top: 0;        /* mobile no margin */
+    min-height: 400px;    /* smaller height */
+    padding: 30px 15px;   /* less padding */
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .search-bar {
+    width: 90%; /* almost full width */
+  }
+}
+
+/* 📱 Tablet (577px – 991px) */
+@media (min-width: 577px) and (max-width: 991px) {
+  .hero {
+    margin-top: 0;       /* tablet no margin */
+    min-height: 500px;
+    padding: 40px 30px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+
+  .search-bar {
+    width: 75%;
+  }
+}

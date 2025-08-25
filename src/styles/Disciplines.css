@@ -1,0 +1,125 @@
+:root {
+  --ink:#0c2d57;
+  --muted:#6b7a86;
+  --line:#c6c6c6;
+  --accent:#0c2d57;
+}
+
+.disciplines {
+  padding:40px 48px;
+  background:#fff;
+}
+
+.disciplines-head {
+ 
+  margin:0 auto 24px;
+  text-align:left; /* already left-aligned */
+  margin-left: 0;  /* force start from left */
+}
+
+/* No centering via auto margin now */
+.disciplines-head h2 {
+  color:var(--ink);
+  font-size:32px;
+  font-weight:700;
+  margin:0 0 8px;
+}
+.disciplines-head p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+  margin:0;
+}
+
+.disciplines-grid1 {
+  margin-top:18px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:0;
+}
+
+.disc-card {
+  width: 100%;
+  padding:24px 22px;
+  background:#fff;
+  border-right:1.5px solid var(--line);
+  border-bottom:1.5px solid var(--line);
+   box-sizing: border-box;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.disc-card:nth-child(3n) {
+  border-right:none;
+}
+.disc-card:nth-last-child(-n + 3) {
+  border-bottom:none;
+}
+
+/* ICON */
+.disc-icon {
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  background:#eef3f7;
+  border-radius:50%;
+  font-size:20px;
+  margin-bottom:14px;
+  transition: transform 0.8s ease-in-out; /* smooth rotation */
+}
+
+.disc-card:hover .disc-icon {
+  transform: rotate(360deg); /* full spin */
+}
+
+.disc-card h3 {
+  margin:0 0 10px;
+  font-size:16px;
+  font-weight:700;
+  color:var(--ink);
+}
+.disc-text {
+  margin:0 0 18px;
+  font-size:13px;
+  line-height:1.65;
+  color:#687887;
+}
+
+.disc-link {
+  background:transparent;
+  border:none;
+  color:#506173;
+  font-size:13px;
+  font-weight:600;
+  padding:0;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+}
+.disc-link .arrow {
+  transition:transform .2s ease;
+}
+.disc-link:hover {
+  color:var(--accent);
+}
+.disc-link:hover .arrow {
+  transform:translate(2px,-2px);
+}
+
+@media (max-width: 1000px){
+  .disciplines-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .disc-card{ border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .disc-card:nth-child(2n){ border-right:none; }
+  .disc-card:nth-last-child(-n + 2){ border-bottom:none; }
+}
+
+@media (max-width: 640px){
+  .disciplines{ padding:28px 16px; }
+  .disciplines-head h2{ font-size:26px; }
+  .disciplines-grid{ grid-template-columns:1fr; }
+  .disc-card{ border-right:none; border-bottom:1px solid var(--line); }
+  .disc-card:last-child{ border-bottom:none; }
+}

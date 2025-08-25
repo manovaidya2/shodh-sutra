@@ -1,0 +1,112 @@
+.career-section {
+  padding: 60px 80px;
+  font-family: "Arial", sans-serif;
+}
+
+.career-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.career-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e3a8a; /* navy blue */
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.career-subheading {
+  font-size: 16px;
+  color: #475569; /* gray */
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.career-card {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: left;
+  background: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.career-card:hover {
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Icon default */
+.career-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+  border-radius: 0; /* normal shape */
+  transition: transform 0.6s ease, border-radius 0.3s ease;
+}
+
+/* On card hover, icon rotates & becomes round */
+.career-card:hover .career-icon {
+  transform: rotate(180deg);
+  border-radius: 50%;
+}
+
+.career-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+
+.career-text {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablet view (2 columns) */
+@media (max-width: 992px) {
+  .career-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .career-heading {
+    font-size: 24px;
+  }
+
+  .career-subheading {
+    font-size: 15px;
+  }
+}
+
+/* Mobile view (1 column) */
+@media (max-width: 600px) {
+  .career-section {
+    padding: 40px 20px;
+  }
+
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-heading {
+    font-size: 22px;
+  }
+
+  .career-subheading {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,301 @@
+.disciplines-section {
+  padding: 80px 80px;
+  background: #fff;
+   margin-bottom: -80px;
+}
+
+.disciplines-container {
+
+    
+  text-align: center;
+}
+
+.disciplines-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.disciplines-subtitle {
+  color: #555;
+ 
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.discipline-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discipline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.discipline-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+/* ========================= */
+/* 🔹 RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Large tablets & small laptops */
+@media (max-width: 1024px) {
+  .disciplines-section {
+    padding: 60px 40px;
+    margin-bottom: -60px;
+  }
+
+  .disciplines-title {
+    font-size: 28px;
+  }
+
+  .disciplines-subtitle {
+    font-size: 15px;
+  }
+
+  .discipline-card {
+    padding: 20px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .disciplines-section {
+    padding: 50px 30px;
+    margin-bottom: -40px;
+  }
+
+  .disciplines-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .disciplines-subtitle {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .disciplines-grid {
+    gap: 20px;
+  }
+
+  .discipline-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .disciplines-section {
+    padding: 40px 20px;
+    margin-bottom: -20px;
+  }
+
+  .disciplines-title {
+    font-size: 20px;
+  }
+
+  .disciplines-subtitle {
+    font-size: 13px;
+  }
+
+  .discipline-card {
+    padding: 18px;
+  }
+
+  .discipline-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+
+
+
+
+
+
+
+.choose-discipline {
+  padding: 80px 80px;
+  background: #fff;
+}
+
+.choose-container {
+
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.choose-left {
+  flex: 1;
+}
+
+.choose-title {
+    margin-top: -50px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 15px;
+}
+
+.choose-subtitle {
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.choose-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.choose-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  text-align: left;
+}
+
+.choose-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a2540;
+  margin-bottom: 5px;
+}
+
+.choose-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+.choose-icon {
+  font-size: 20px;
+  color: #007bff;
+  min-width: 30px;
+}
+
+.choose-right img {
+  max-width: 380px;
+  width: 90%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .choose-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .choose-left {
+    order: 2;
+  }
+  .choose-right {
+    order: 1;
+  }
+  .choose-item {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+
+/* ========================= */
+/* 🔹 RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .choose-discipline {
+    padding: 60px 40px;
+  }
+
+  .choose-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .choose-left {
+    order: 2;
+  }
+
+  .choose-right {
+    order: 1;
+  }
+
+  .choose-title {
+    margin-top: 0;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .choose-subtitle {
+    font-size: 15px;
+    text-align: center;
+    margin: 0 auto 25px;
+  }
+
+  .choose-item {
+    justify-content: center;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .choose-discipline {
+    padding: 40px 20px;
+  }
+
+  .choose-title {
+    font-size: 22px;
+  }
+
+  .choose-subtitle {
+    font-size: 14px;
+  }
+
+  .choose-item h3 {
+    font-size: 16px;
+  }
+
+  .choose-item p {
+    font-size: 13px;
+  }
+
+  .choose-icon {
+    font-size: 18px;
+    min-width: 24px;
+  }
+
+  .choose-right img {
+    max-width: 280px;
+    width: 100%;
+  }
+}
