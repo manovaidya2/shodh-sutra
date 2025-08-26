@@ -32,7 +32,7 @@ const steps = [
 const HowWork = () => {
   return (
     <div className="howwork-container">
-      <h1 className="howwork-title">How It Works</h1>
+      <h1 className="howwork-title">How It Works1</h1>
       <p className="howwork-description">
        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
