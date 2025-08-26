@@ -46,18 +46,19 @@ function Disciplines() {
         </p>
       </div>
 
-      <div className="disciplines-grid1">
-        {items.map((it, i) => (
-          <article className="disc-card" key={i}>
-            <div className="disc-icon">{it.icon}</div>
-            <h3>{it.title}</h3>
-            <p className="disc-text">{it.text}</p>
-            <button className="disc-link">
-              View Course <span className="arrow">↗</span>
-            </button>
-          </article>
-        ))}
-      </div>
+      <div className="disciplines-grid">
+  {items.map((it, i) => (
+    <article className="disc-card" key={i}>
+      <div className="disc-icon">{it.icon}</div>
+      <h3>{it.title}</h3>
+      <p className="disc-text">{it.text}</p>
+      <button className="disc-link">
+        View Course <span className="arrow">↗</span>
+      </button>
+    </article>
+  ))}
+</div>
+
     </section>
   );
 }
