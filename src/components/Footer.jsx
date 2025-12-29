@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Footer.css"; // Import CSS
+import "../styles/Footer.css";
 import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import sodhLogo from "../images/sodh.png";
 
@@ -13,8 +13,9 @@ const Footer = () => {
             <img src={sodhLogo} alt="ShodhSutra" />
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            ShodhSutra is a dedicated PhD guidance and mentorship platform
+            helping research aspirants navigate admissions, research planning,
+            and academic growth with confidence and clarity.
           </p>
           <h4>Follow Us On :</h4>
           <div className="social-icons">
@@ -26,20 +27,20 @@ const Footer = () => {
 
         {/* Column 2 */}
         <div className="footer-column">
-          <h4>Quick links</h4>
+          <h4>Quick Links</h4>
           <a href="/">Home</a>
           <a href="/discipline">Disciplines</a>
-          <a href="#">University</a>
+          <a href="#">Universities</a>
           <a href="/guide">Guides</a>
-          <a href="#">Resources Center</a>
+          <a href="#">Resource Center</a>
           <a href="/contact">Contact Us</a>
         </div>
 
         {/* Column 3 */}
         <div className="footer-column">
-          <h4>About Us</h4>
-          <a href="/about">Meet ShodSutra</a>
-          <a href="/whyprusuie">Why Pursue a PHD ?</a>
+          <h4>About ShodhSutra</h4>
+          <a href="/about">Meet ShodhSutra</a>
+          <a href="/whyprusuie">Why Pursue a PhD?</a>
           <a href="#">For Students</a>
           <a href="#">Admissions & Mentorship Program</a>
           <a href="#">For Mentors</a>
@@ -49,14 +50,14 @@ const Footer = () => {
 
         {/* Column 4 */}
         <div className="footer-column">
-          <h4>Others</h4>
+          <h4>Legal</h4>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        © All Rights Reserved
+        © {new Date().getFullYear()} ShodhSutra. All Rights Reserved.
       </div>
     </footer>
   );

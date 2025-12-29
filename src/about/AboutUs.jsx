@@ -18,18 +18,19 @@ function AboutUs() {
         style={{ backgroundImage: `url(${aboutBg})` }}
       >
         <div className="overlay">
-          <p className="small-title">Meet ShodhSutra</p>
-          <h1>
-            About SodhSutra – Your Gateway to
-            <br /> Doctoral Excellence
-          </h1>
-          <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <button className="explore-btn">Explore More</button>
-        </div>
+  <p className="small-title">Meet ShodhSutra</p>
+  <h1>
+    About ShodhSutra – Your Gateway to
+    <br /> Doctoral Excellence
+  </h1>
+  <p className="description">
+    ShodhSutra is your trusted companion on the journey to a PhD. We provide expert guidance, 
+    resources, and mentorship to help aspiring researchers achieve excellence, contribute original 
+    knowledge, and make an impact in their field.
+  </p>
+  <button className="explore-btn">Explore More</button>
+</div>
+
       </section>
 
       {/* About Details Section */}
@@ -39,14 +40,13 @@ function AboutUs() {
           <div className="about-text">
             <h2>Who We Are</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit
+             Shodhsutra is a distinguished initiative of the EduGlobe Services FZ LLC,
+              RAKEZ,Dubai, United Arab Emirates dedicated exclusively to empowering
+               researchaspirants and streamlining the path to doctoral excellence.
+                With a deep commitment to academic integrity, global research standards, 
+                andstudent-centric support, Shodhsutra acts as a guiding force for those 
+                seeking PhDadmissions across diverse disciplines and universities, both in 
+                India and abroad.
             </p>
           </div>
           <div className="about-image">
@@ -61,14 +61,9 @@ function AboutUs() {
           <div className="vision">
             <h3>Our Vision</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              To make quality research education accessible, transparent,
+               and achievable byoffering structured guidance, institutional
+                linkages, and holistic support to PhDaspirants.
             </p>
           </div>
 
@@ -80,14 +75,7 @@ function AboutUs() {
           <div className="mission">
             <h3>Our Mission</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              To emerge globally most trusted and efficient research facilitation platform,fostering a culture of innovation, critical inquiry, and academic excellence at thedoctoral level.
             </p>
           </div>
         </div>
@@ -95,15 +83,15 @@ function AboutUs() {
         <section className="what-we-do">
       <h2 className="section-title">What We Do</h2>
       <p className="section-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Whether you're a workingprofessional, academician, or apassionate learner, we provide theroadmap, resources, and recognitionto help you earn your doctoraldegree with dignity and discipline.
       </p>
 
       <div className="what-we-do-content">
         <div className="what-we-do-item">
           <img src={scholarIcon} alt="Scholar Icon" className="item-icon" />
-          <h3>Connect Scholars with Institutions</h3>
+          <h3>University Tie-ups &Collaborations</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+           Seamless admissions throughour academic partnerships withvarious universities.
           </p>
         </div>
 
@@ -111,9 +99,12 @@ function AboutUs() {
 
         <div className="what-we-do-item">
           <img src={phdIcon} alt="PhD Icon" className="item-icon" />
-          <h3>Simplify the PhD Admission Process</h3>
+          <h3>PhD Admission Guidance</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+            Personalized support for
+admission into UGC-recognized
+Indian universities and reputed
+international institutions.
           </p>
         </div>
 
@@ -121,9 +112,9 @@ function AboutUs() {
 
         <div className="what-we-do-item">
           <img src={mentorshipIcon} alt="Mentorship Icon" className="item-icon" />
-          <h3>Provide Resources & Mentorship</h3>
+          <h3>Mentorship & ProgressMonitoring:</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+           Continuous guidance fromregistration to thesissubmission
           </p>
         </div>
       </div>

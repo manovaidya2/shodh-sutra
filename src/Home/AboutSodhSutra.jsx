@@ -14,17 +14,11 @@ const AboutSodhSutra = () => {
       <div className="about-content">
         <div className="about-subtitle">
        
-          <span>KNOWLADGE MEET INNOVATION</span>
+          <span>Welcome To The World of Research Education</span>
         </div>
         <h2>About SodhSutra</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+          Shodhsutra is a distinguished initiative of the <strong>EduGlobe Services FZ LLC, RAKEZ,Dubai, United Arab Emirates </strong>dedicated exclusively to empowering researchaspirants and streamlining the path to doctoral excellence. With a deep commitment to academic integrity, global research standards, andstudent-centric support, Shodhsutra acts as a guiding force for those seeking PhDadmissions across diverse disciplines and universities, both in India and abroad.
         </p>
         <button className="about-btn">View All Programs</button>
       </div>

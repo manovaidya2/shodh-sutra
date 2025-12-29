@@ -9,20 +9,19 @@ function WhySodhSutra() {
       <div className="why-content">
         <h2>Why SodhSutra?</h2>
         <p className="why-intro">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat.
+          Whether you're a workingprofessional, academician, or apassionate learner, we provide theroadmap, resources, and recognitionto help you earn your doctoraldegree with dignity and discipline
         </p>
 
         <div className="why-features">
           <div className="feature-item">
             <span className="icon">💡</span>
             <div>
-              <h4>Simplified Application Workflow</h4>
+              <h4>PhD Admission Guidance</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Personalized support for
+admission into UGC-recognized
+Indian universities and reputed
+international institutions
               </p>
             </div>
           </div>
@@ -30,10 +29,9 @@ function WhySodhSutra() {
           <div className="feature-item">
             <span className="icon">✅</span>
             <div>
-              <h4>Verified Institution Listings</h4>
+              <h4>PhD Admission GuidanceResearch Proposal & SynopsisDevelopment:</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Expert help in crafting research-worthy and university-compliantproposals.
               </p>
             </div>
           </div>
@@ -41,10 +39,9 @@ function WhySodhSutra() {
           <div className="feature-item">
             <span className="icon">📊</span>
             <div>
-              <h4>Track Application Progress</h4>
+              <h4>Supervisor & GuideAllocation:</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Access to a vast network ofexperienced research guidesacross disciplines.
               </p>
             </div>
           </div>
@@ -52,10 +49,19 @@ function WhySodhSutra() {
           <div className="feature-item">
             <span className="icon">🎓</span>
             <div>
-              <h4>Mentorship & Research Assistance</h4>
+              <h4>University Tie-ups &Collaborations:</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Seamless admissions throughour academic partnerships withvarious universities
+              </p>
+            </div>
+          </div>
+          
+          <div className="feature-item">
+            <span className="icon">🎓</span>
+            <div>
+              <h4>Mentorship & ProgressMonitoring:</h4>
+              <p>
+               Continuous guidance fromregistration to thesissubmission.
               </p>
             </div>
           </div>

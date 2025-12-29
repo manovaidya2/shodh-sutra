@@ -6,9 +6,14 @@ function PhDCheck() {
   return (
     <section className="phd-section">
       <div className="phd-container">
-        <h2 className="phd-heading">Is a PhD Right for You?</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div className="phd-content">
+       <h2 className="phd-heading">Is a PhD Right for You?</h2>
+<p>
+  Pursuing a PhD is a rewarding journey, but it requires dedication, curiosity, 
+  and a passion for research. If you enjoy exploring new ideas, solving complex 
+  problems, and contributing original knowledge, a PhD could be the right path for you.
+</p>
+<div className="phd-content">
+
           <div className="phd-image-wrapper">
             <div className="phd-border-line line1"></div>
             <div className="phd-border-line line2"></div>

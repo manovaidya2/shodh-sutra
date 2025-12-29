@@ -12,33 +12,33 @@ import consultantIcon from "./image/consultant (1) 1.png";
 const careers = [
   {
     icon: researcherIcon,
-    title: "Academic Researcher",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Academic Recognition & PrestigeA",
+    text: "Earning a PhD is the highest academicqualification, earning you the title of Doctorand establishing your authority in a specializedfield.",
   },
   {
     icon: scientistIcon,
-    title: "Scientist in R&D Labs",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Career Advancement & LeadershipOpportunities",
+    text: "PrestigeA PhD opens doors to senior academic,research, administrative, and industryleadership positions that are often inaccessiblewithout a doctoral degree.",
   },
   {
     icon: analystIcon,
-    title: "Policy Analyst",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "In-Depth Subject Mastery",
+    text: "Doctoral research enables you to gain deep original insights into your chosen subject contributing new knowledge to the global academic community.",
   },
   {
     icon: corporateIcon,
-    title: "Corporate Research & Innovation",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Teaching & Academic Careers",
+    text: "A PhD equips you to teach in universities and colleges, mentor the next generation of scholars, and contribute to academic excellence.",
   },
   {
     icon: startupIcon,
-    title: "Start-up Founder",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Global Research & Fellowship Opportunities",
+    text: "Access international fellowships, research grants, and collaborative projects across borders to advance your expertise.",
   },
   {
     icon: consultantIcon,
-    title: "Research Consultant",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Intellectual Freedom & Innovation",
+    text: "Conduct original research, gain deep insights, and contribute meaningful knowledge to your field and the global community.",
   },
 ];
 
@@ -46,10 +46,10 @@ function CareerPaths() {
   return (
     <section className="career-section">
       <div className="career-container">
-        <h2 className="career-heading">Career Paths After PhD</h2>
-        <p className="career-subheading">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+       <h2 className="career-heading">Career Paths After PhD</h2>
+<p className="career-subheading">
+  Explore diverse opportunities after completing a PhD — from teaching and research to global fellowships, innovation, and leadership roles across academia and industry.
+</p>
 
         <div className="career-grid">
           {careers.map((career, index) => (
