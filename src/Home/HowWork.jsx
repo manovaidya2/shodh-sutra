@@ -9,22 +9,22 @@ import step4Img from '../images/job-interview 2.png';
 const steps = [
   {
     title: 'Select Research Area',
-    description: 'Choose your field of study or research.',
+    description: 'Choose your research field with expert guidance.',
     img: innovationImg,
   },
   {
     title: 'Submit Application',
-    description: 'Fill out and submit your application form.',
+    description: 'Apply with complete documentation and compliance support..',
     img: step2Img,
   },
   {
     title: 'Connect with Institutions',
-    description: 'Get matched with top institutions in your field.',
+    description: 'Get matched with the right university and research supervisor.',
     img: step3Img,
   },
   {
     title: 'Interview & Offer Letter',
-    description: 'Complete interviews and receive your offer letter.',
+    description: 'Attend interviews and receive your official admission offer.',
     img: step4Img,
   },
 ];
@@ -34,7 +34,7 @@ const HowWork = () => {
     <div className="howwork-container">
       <h1 className="howwork-title">How It Works</h1>
       <p className="howwork-description">
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+     ShodhSutra offers a structured, transparent, and mentor-driven pathway to doctoral success. From identifying the right research direction to securing admission and continuous academic support, we guide scholars at every stage of their PhD journey with integrity and global research standards.
       </p>
 
       <div className="howwork-steps">

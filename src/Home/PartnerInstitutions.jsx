@@ -12,7 +12,7 @@ const PartnerInstitutions = () => {
       <div className="content">
         <h1 className="title">Partner Institutions</h1>
         <p className="description1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         ShodhSutra collaborates with UGC-recognized Indian universities and reputed international institutions to provide scholars with credible, compliant, and globally aligned research opportunities.
         </p>
         <div className="institutions">
           <div className="institution-card">
