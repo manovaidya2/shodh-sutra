@@ -5,7 +5,49 @@
   top: 0;
   z-index: 1200;
 }
+.contact-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
 
+/* Individual contact items */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.contact-item a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.contact-item.whatsapp {
+  color: #25d366;
+}
+
+.contact-item.whatsapp a {
+  color: #000000;
+  font-weight: 500;
+}
+
+.contact-item.whatsapp:hover {
+  opacity: 0.9;
+}
+
+/* Top Links */
+.top-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-icon {
+  color: #000000;
+  margin-left: 5px;
+  font-size: 16px;
+}
 /* Top Bar (scrolls normally) */
 .top-bar {
   position: fixed;
@@ -40,6 +82,7 @@
 .social-icon {
   margin-left: 10px;
   cursor: pointer;
+  margin-top: 10px;
 }
 /* Sticky header with shadow */
 .header {

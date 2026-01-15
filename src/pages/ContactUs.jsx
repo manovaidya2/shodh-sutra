@@ -4,23 +4,35 @@ import aboutBg from "../images/contact.png";
 import PhDConsultation from "../Home/PhDConsultation";
 import "../styles/ContactSection.css";
 
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+
 function ContactUs() {
   const contacts = [
     {
-      icon: "fa-solid fa-envelope",
+      icon: <FaEnvelope />,
       title: "Email Us",
       value: "support@sodhsutra.com",
     },
     {
-      icon: "fa-solid fa-phone",
-      title: "Call Us",
-      value: "+91-XXXXXXXXXX",
+      icon: <FaPhoneAlt />,
+      title: "Call / WhatsApp",
+      value: "+971 528313726, +91 8677920337",
+      phone: ["971528313726", "918677920337"],
+      whatsapp: [
+        "https://wa.me/971528313726",
+        "https://wa.me/918677920337",
+      ],
     },
     {
-      icon: "fa-solid fa-location-dot",
+      icon: <FaMapMarkerAlt />,
       title: "Office Address",
       value:
-        "SodhSutra HQ, 3rd Floor, Research Tower, Knowledge Park, New Delhi – 110001, India",
+        "Eduglobe Services FZ LLC, SBC, 2nd Al KAZIM Building 3 HOR Al ANZ East, Dubai, United Arab Emirates Near Al Qiyadah metro station.",
     },
   ];
 
@@ -38,9 +50,9 @@ function ContactUs() {
             <br /> PhD Journey
           </h1>
           <p className="process-description">
-            Have questions about your PhD applications or research plans? Our team of experts 
-            is ready to provide guidance, resources, and personalized support at every step 
-            of your doctoral journey.
+            Have questions about your PhD applications or research plans? Our
+            team of experts is ready to provide guidance, resources, and
+            personalized support at every step of your doctoral journey.
           </p>
           <button className="process-explore-btn">Explore More</button>
         </div>
@@ -54,11 +66,42 @@ function ContactUs() {
         <div className="contact-container">
           {contacts.map((item, index) => (
             <div key={index} className="contact-card">
-              <div className="contact-icon">
-                <i className={item.icon}></i>
-              </div>
+              <div className="contact-icon">{item.icon}</div>
+
               <h3>{item.title}</h3>
-              <p>{item.value}</p>
+
+              {/* Email */}
+              {item.title === "Email Us" && (
+                <a href={`mailto:${item.value}`} className="contact-link">
+                  {item.value}
+                </a>
+              )}
+
+              {/* Call & WhatsApp */}
+              {item.title === "Call / WhatsApp" && (
+                <>
+                  {item.phone.map((num, i) => (
+                    <p key={i} className="phone-row">
+                      <FaPhoneAlt className="inline-icon" />
+                      <a href={`tel:${num}`} className="contact-link">
+                        {num}
+                      </a>
+                    </p>
+                  ))}
+
+                  <a
+                    href={item.whatsapp[0]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-btn"
+                  >
+                    <FaWhatsapp /> Chat on WhatsApp
+                  </a>
+                </>
+              )}
+
+              {/* Address */}
+              {item.title === "Office Address" && <p>{item.value}</p>}
             </div>
           ))}
         </div>
