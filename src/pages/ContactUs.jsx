@@ -16,7 +16,7 @@ function ContactUs() {
     {
       icon: <FaEnvelope />,
       title: "Email Us",
-      value: "support@sodhsutra.com",
+      value: "support@shodhsutra.com",
     },
     {
       icon: <FaPhoneAlt />,

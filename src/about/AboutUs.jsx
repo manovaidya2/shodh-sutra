@@ -40,8 +40,9 @@ function AboutUs() {
           <div className="about-text">
             <h2>Who We Are</h2>
             <p>
-             Shodhsutra is a distinguished initiative of the EduGlobe Services FZ LLC,
-              RAKEZ,Dubai, United Arab Emirates dedicated exclusively to empowering
+             Shodhsutra is a distinguished initiative of the Eduglobe Services FZ LLC ,SBC, 2nd Al KAZIM Building 3 HOR Al ANZ East,  Dubai, United Arab Emirates.
+
+Near Al Qiyadah metro station. dedicated exclusively to empowering
                researchaspirants and streamlining the path to doctoral excellence.
                 With a deep commitment to academic integrity, global research standards, 
                 andstudent-centric support, Shodhsutra acts as a guiding force for those 

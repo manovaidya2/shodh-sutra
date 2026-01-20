@@ -41,7 +41,7 @@ const Header = () => {
             {/* Email */}
             <span className="contact-item">
               <FaEnvelope />
-              <a href="mailto:phd@gmail.com">phd@gmail.com</a>
+              <a href="support@shodhsutra.com">support@shodhsutra.com</a>
             </span>
           </div>
 

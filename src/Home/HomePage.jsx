@@ -9,6 +9,7 @@ import Testimonial from './Testimonial';
 import Resources from './Resources';
 import PhDConsultation from './PhDConsultation';
 import GallerySection from './GallerySection';
+import FaqSection from './FaqSection';
 
 
 
@@ -27,7 +28,7 @@ function HomePage() {
        <Testimonial />
        <Resources />
        <PhDConsultation />
-       
+       <FaqSection />
   </>
   );
 }

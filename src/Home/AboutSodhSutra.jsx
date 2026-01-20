@@ -18,7 +18,9 @@ const AboutSodhSutra = () => {
         </div>
         <h2>About SodhSutra</h2>
         <p>
-          Shodhsutra is a distinguished initiative of the <strong>EduGlobe Services FZ LLC, RAKEZ,Dubai, United Arab Emirates </strong>dedicated exclusively to empowering researchaspirants and streamlining the path to doctoral excellence. With a deep commitment to academic integrity, global research standards, andstudent-centric support, Shodhsutra acts as a guiding force for those seeking PhDadmissions across diverse disciplines and universities, both in India and abroad.
+          Shodhsutra is a distinguished initiative of the <strong>Eduglobe Services FZ LLC ,SBC, 2nd Al KAZIM Building 3 HOR Al ANZ East,  Dubai, United Arab Emirates.
+
+Near Al Qiyadah metro station. </strong>dedicated exclusively to empowering researchaspirants and streamlining the path to doctoral excellence. With a deep commitment to academic integrity, global research standards, andstudent-centric support, Shodhsutra acts as a guiding force for those seeking PhDadmissions across diverse disciplines and universities, both in India and abroad.
         </p>
         <button className="about-btn">View All Programs</button>
       </div>
