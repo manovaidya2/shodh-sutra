@@ -28,6 +28,7 @@ function App() {
             <Route path="/consultation" element={<PhDConsultation/>} />
              <Route path="/guide" element={<Guide/>} />
              <Route path="/apply-now" element={<ApplyNow/>} />
+             
       </Routes>
       <Footer />
     </Router>

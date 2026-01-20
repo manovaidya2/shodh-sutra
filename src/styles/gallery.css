@@ -1,0 +1,158 @@
+.gallery-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.gallery-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-header h2 {
+  font-size: 32px;
+}
+
+.gallery-header p {
+  color: #666;
+}
+
+/* Carousel */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.carousel-item {
+  min-width: 220px;
+  margin-right: 20px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.carousel-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay span {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Arrows */
+.nav-btn {
+  background: #dbaa23;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  position: absolute;
+  z-index: 10;
+}
+
+.nav-btn.left {
+  left: -20px;
+}
+
+.nav-btn.right {
+  right: -20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .carousel-item {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: 150px;
+  }
+}
+
+/* Modal Background */
+.image-modal {
+  position: fixed;
+  inset: 0;                /* top right bottom left = 0 */
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;           /* 🔥 Header/Footer se upar */
+}
+
+/* Modal Box */
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 10000;          /* safety layer */
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+}

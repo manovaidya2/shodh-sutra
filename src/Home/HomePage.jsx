@@ -8,6 +8,7 @@ import PartnerInstitutions from './PartnerInstitutions';
 import Testimonial from './Testimonial';
 import Resources from './Resources';
 import PhDConsultation from './PhDConsultation';
+import GallerySection from './GallerySection';
 
 
 
@@ -22,6 +23,7 @@ function HomePage() {
        <WhySodhSutra />
        <HowWork />
        <PartnerInstitutions />
+       <GallerySection />
        <Testimonial />
        <Resources />
        <PhDConsultation />
