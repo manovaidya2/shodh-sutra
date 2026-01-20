@@ -30,7 +30,7 @@ function PhDConsultation() {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:5007/api/consultation", {
+      const res = await fetch("https://api.shodhsutra.com/api/consultation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

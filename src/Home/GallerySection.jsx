@@ -53,14 +53,14 @@ const GallerySection = () => {
               {images.map((img) => (
                 <div className="carousel-item" key={img._id}>
                   <img
-                    src={`http://localhost:5007${img.imageUrl}`}
+                    src={`https://api.shodhsutra.com${img.imageUrl}`}
                     alt=""
                   />
                   <div
                     className="overlay"
                     onClick={() =>
                       setSelectedImg(
-                        `http://localhost:5007${img.imageUrl}`
+                        `https://api.shodhsutra.com${img.imageUrl}`
                       )
                     }
                   >
