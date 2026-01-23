@@ -9,7 +9,9 @@ function WhySodhSutra() {
       <div className="why-content">
         <h2>Why SodhSutra?</h2>
         <p className="why-intro">
-          Whether you're a workingprofessional, academician, or apassionate learner, we provide theroadmap, resources, and recognitionto help you earn your doctoraldegree with dignity and discipline
+          Whether you're a working professional, an academician, or a passionate learner, 
+          we provide the roadmap, resources, and recognition to help you earn your doctoral 
+          degree with dignity and discipline.
         </p>
 
         <div className="why-features">
@@ -18,10 +20,8 @@ function WhySodhSutra() {
             <div>
               <h4>PhD Admission Guidance</h4>
               <p>
-               Personalized support for
-admission into UGC-recognized
-Indian universities and reputed
-international institutions
+                Personalized support for admission into UGC-recognized Indian universities 
+                and reputed international institutions.
               </p>
             </div>
           </div>
@@ -29,9 +29,9 @@ international institutions
           <div className="feature-item">
             <span className="icon">✅</span>
             <div>
-              <h4>PhD Admission GuidanceResearch Proposal & SynopsisDevelopment:</h4>
+              <h4>Research Proposal & Synopsis Development</h4>
               <p>
-               Expert help in crafting research-worthy and university-compliantproposals.
+                Expert assistance in crafting research-worthy and university-compliant proposals.
               </p>
             </div>
           </div>
@@ -39,9 +39,9 @@ international institutions
           <div className="feature-item">
             <span className="icon">📊</span>
             <div>
-              <h4>Supervisor & GuideAllocation:</h4>
+              <h4>Supervisor & Guide Allocation</h4>
               <p>
-               Access to a vast network ofexperienced research guidesacross disciplines.
+                Access to a vast network of experienced research guides across disciplines.
               </p>
             </div>
           </div>
@@ -49,9 +49,9 @@ international institutions
           <div className="feature-item">
             <span className="icon">🎓</span>
             <div>
-              <h4>University Tie-ups &Collaborations:</h4>
+              <h4>University Tie-ups & Collaborations</h4>
               <p>
-                Seamless admissions throughour academic partnerships withvarious universities
+                Seamless admissions through our academic partnerships with various universities.
               </p>
             </div>
           </div>
@@ -59,9 +59,9 @@ international institutions
           <div className="feature-item">
             <span className="icon">🎓</span>
             <div>
-              <h4>Mentorship & ProgressMonitoring:</h4>
+              <h4>Mentorship & Progress Monitoring</h4>
               <p>
-               Continuous guidance fromregistration to thesissubmission.
+                Continuous guidance from registration to thesis submission.
               </p>
             </div>
           </div>

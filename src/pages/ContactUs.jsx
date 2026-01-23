@@ -32,7 +32,7 @@ function ContactUs() {
       icon: <FaMapMarkerAlt />,
       title: "Office Address",
       value:
-        "Eduglobe Services FZ LLC, SBC, 2nd Al KAZIM Building 3 HOR Al ANZ East, Dubai, United Arab Emirates Near Al Qiyadah metro station.",
+        "EduGlobe Services FZ-LLC, Unit No.209-04, Al Kazim, 2nd Floor, Hor Alz Anz, Dubai, UAE (Near Al Quida Metro Station).",
     },
   ];
 

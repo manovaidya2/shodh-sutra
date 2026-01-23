@@ -19,31 +19,43 @@ const Header = () => {
       {/* Top Bar */}
       <div className="header-wrapper">
         <div className="top-bar">
-          <div className="contact-info">
-            {/* Phone */}
-            <span className="contact-item">
-              <FaPhoneAlt />
-              <a href="tel:918677920337">+91 8677920337</a>
-            </span>
+       <div className="contact-info">
+  {/* India Phone */}
+  <span className="contact-item">
+    <FaPhoneAlt />
+    <a href="tel:918677920337">+91 8677920337</a>
+  </span>
 
-            {/* WhatsApp */}
-            <span className="contact-item whatsapp">
-              <FaWhatsapp />
-              <a
-                href="https://wa.me/918677920337"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                +91 8677920337
-              </a>
-            </span>
+  {/* India WhatsApp */}
+  <span className="contact-item whatsapp">
+    <FaWhatsapp />
+    <a
+      href="https://wa.me/918677920337"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      +91 8677920337
+    </a>
+  </span>
 
-            {/* Email */}
-            <span className="contact-item">
-              <FaEnvelope />
-              <a href="support@shodhsutra.com">support@shodhsutra.com</a>
-            </span>
-          </div>
+  {/* UAE Phone */}
+  <span className="contact-item">
+    <FaPhoneAlt />
+    <a href="tel:971524186676">+971 52 418 6676</a>
+  </span>
+
+  {/* UAE WhatsApp */}
+ 
+
+  {/* Email */}
+  <span className="contact-item">
+    <FaEnvelope />
+    <a href="mailto:support@shodhsutra.com">
+      support@shodhsutra.com
+    </a>
+  </span>
+</div>
+
 
           <div className="top-links">
             <a href="#">For Students</a>
