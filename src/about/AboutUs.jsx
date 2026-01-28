@@ -40,7 +40,7 @@ function AboutUs() {
           <div className="about-text">
             <h2>Who We Are</h2>
             <p>
-              ShodhSutra is a distinguished initiative of EduGlobe Services FZ-LLC, Unit No.209-04, Al Kazim, 2nd Floor, Hor Alz Anz, Dubai, UAE (Near Al Quida Metro Station). We are dedicated exclusively to empowering
+              ShodhSutra is a distinguished initiative of <strong>EduGlobe Services FZ-LLC, Ras Al Khaimah(RAK), UAE , Co ordination office : Unit No. 209-04, Al Kazim, 2nd floor, Hor Alz Anz, Dubai, UAE(Near Al Qiyadah Metro Station).</strong> We are dedicated exclusively to empowering
               research aspirants and streamlining the path to doctoral excellence.
               With a strong commitment to academic integrity, global research standards,
               and student-centric support, ShodhSutra serves as a guiding force for

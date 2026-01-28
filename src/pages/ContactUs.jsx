@@ -22,7 +22,7 @@ function ContactUs() {
       icon: <FaPhoneAlt />,
       title: "Call / WhatsApp",
       value: "+971 528313726, +91 8677920337",
-      phone: ["971528313726", "918677920337"],
+      phone: ["+971528313726", "+918677920337"],
       whatsapp: [
         "https://wa.me/971528313726",
         "https://wa.me/918677920337",
@@ -32,7 +32,7 @@ function ContactUs() {
       icon: <FaMapMarkerAlt />,
       title: "Office Address",
       value:
-        "EduGlobe Services FZ-LLC, Unit No.209-04, Al Kazim, 2nd Floor, Hor Alz Anz, Dubai, UAE (Near Al Quida Metro Station).",
+        "EduGlobe Services FZ-LLC, Ras Al Khaimah(RAK), UAE , Co ordination office : Unit No. 209-04, Al Kazim, 2nd floor, Hor Alz Anz, Dubai, UAE(Near Al Qiyadah Metro Station).",
     },
   ];
 
