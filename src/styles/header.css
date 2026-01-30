@@ -367,11 +367,7 @@
 
 
 
-/* Sidebar must be column */
-.nav {
-  display: flex;
-  flex-direction: column;
-}
+
 
 /* Mobile only */
 @media (max-width: 768px) {
