@@ -63,6 +63,15 @@ export default function ShodhSutraForm() {
     academicDesignation: "",
     academicSubjects: "",
     academicExperience: "",
+    
+    // Research & Publications
+    totalResearchPapers: "",
+    otherUniversityResearch: "",
+    otherUniversitySession: "",
+    existingResearch: "",
+    seminarsAttended: "",
+    researchFields: "",
+    researchFiles: [],
 
     // New field for uploaded files
     uploadedFiles: [],
@@ -121,7 +130,7 @@ export default function ShodhSutraForm() {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  // File upload handler
+  // File upload handler for marksheets
   const handleFileUpload = (e) => {
     const files = Array.from(e.target.files);
     const validFiles = files.filter(file => {
@@ -152,7 +161,7 @@ export default function ShodhSutraForm() {
     }));
   };
 
-  // File remove handler
+  // File remove handler for marksheets
   const removeFile = (index) => {
     setFormData(prev => ({
       ...prev,
@@ -160,156 +169,203 @@ export default function ShodhSutraForm() {
     }));
   };
 
- const handleSubmit = async () => {
-  // Validation
-  if (!formData.fullName || !formData.email || !formData.mobile) {
-    alert("Please fill in all required fields (Name, Email, Mobile)");
-    return;
-  }
-
-  if (!agreed) {
-    alert("Please confirm that the information is honest and accurate");
-    return;
-  }
-
-  if (!formData.authorityIncidents) {
-    alert("Please describe THREE authority incidents as mentioned");
-    return;
-  }
-
-  // Check if professional status is selected
-  if (selectedStatus.length === 0) {
-    alert("Please select your current professional status");
-    return;
-  }
-
-  setIsSubmitting(true);
-
-  try {
-    // Create FormData object for file upload
-    const formDataToSend = new FormData();
-    
-    // Append all form fields - सीधे formData से append करें
-    Object.keys(formData).forEach(key => {
-      // uploadedFiles को छोड़ दें, उन्हें अलग से handle करेंगे
-      if (key !== 'uploadedFiles') {
-        formDataToSend.append(key, formData[key] || '');
+  // Research file upload handler
+  const handleResearchFileUpload = (e) => {
+    const files = Array.from(e.target.files);
+    const validFiles = files.filter(file => {
+      const validTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png'];
+      const maxSize = 5 * 1024 * 1024; // 5MB
+      
+      if (!validTypes.includes(file.type)) {
+        alert(`File ${file.name} is not a valid type. Please upload PDF, JPG, or PNG files.`);
+        return false;
       }
-    });
-    
-    // Append status and pgStatus
-    formDataToSend.append('professionalStatus', selectedStatus[0] || "");
-    formDataToSend.append('pgStatus', pgStatus);
-    formDataToSend.append('phdSeriousness', phdValue.toString());
-    
-    // Append uploaded files
-    formData.uploadedFiles.forEach(file => {
-      formDataToSend.append('marksheets', file);
+      
+      if (file.size > maxSize) {
+        alert(`File ${file.name} is too large. Maximum size is 5MB.`);
+        return false;
+      }
+      
+      return true;
     });
 
-    console.log("Submitting form with files:", formData.uploadedFiles.length, "files");
-    
-    // Debug: FormData contents देखें
-    for (let [key, value] of formDataToSend.entries()) {
-      if (key !== 'marksheets') {
-        console.log(key, ':', value);
-      }
+    if (formData.researchFiles.length + validFiles.length > 5) {
+      alert("Maximum 5 research files allowed");
+      return;
     }
-    
-    const response = await axiosInstance.post("/shodh-sutra/submit", formDataToSend, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    });
-    
-    console.log("Response received:", response.data);
-    
-    alert("Profile submitted successfully! We'll contact you soon.");
-    
-    // Reset form after successful submission
-    setFormData({
-      fullName: "",
-      email: "",
-      mobile: "",
-      cityCountry: "",
-      age: "",
-      class10Board: "",
-      class10Year: "",
-      class10Percentage: "",
-      class12Stream: "",
-      class12Board: "",
-      class12Year: "",
-      class12Percentage: "",
-      graduationDegree: "",
-      graduationSpecialisation: "",
-      graduationUniversity: "",
-      graduationMode: "",
-      graduationAdmissionYear: "",
-      graduationPassingYear: "",
-      graduationPercentage: "",
-      pgDegree: "",
-      pgSpecialisation: "",
-      pgUniversity: "",
-      pgAdmissionYear: "",
-      pgPassingYear: "",
-      pgMode: "",
-      pgPercentage: "",
-      jobTitle: "",
-      industry: "",
-      organisation: "",
-      firstJobYear: "",
-      experienceYears: "",
-      jobHistory: "",
-      businessNature: "",
-      businessStartYear: "",
-      previousWork: "",
-      currentRole: "",
-      responsibilities: "",
-      consultantExpertise: "",
-      consultantExperience: "",
-      consultantClients: "",
-      academicInstitution: "",
-      academicDesignation: "",
-      academicSubjects: "",
-      academicExperience: "",
-      uploadedFiles: [],
-      professionalGoals: "",
-      blockers: "",
-      underUtilised: "",
-      authorityIncidents: "",
-      phdWhy: "",
-      phdBenefits: "",
-      phdReason: "",
-      nicheHelp: "",
-      nicheExpertise: "",
-      nicheIdeal: "",
-      lifeLessons: "",
-      heardFrom: "",
-      expectations: "",
-      phdHelp: "",
-      sessionValue: "",
-      weeklyHours: "",
-      fears: "",
-      honestAdvice: "",
-    });
-    setPhdValue(5);
-    setPgStatus("");
-    setSelectedStatus([]);
-    setAgreed(false);
-    
-  } catch (err) {
-    console.error("Submission error details:", err);
-    console.error("Error response:", err.response?.data);
-    
-    if (err.response?.data?.message) {
-      alert(`Submission failed: ${err.response.data.message}`);
-    } else {
-      alert("Submission failed. Please try again.");
+
+    setFormData(prev => ({
+      ...prev,
+      researchFiles: [...prev.researchFiles, ...validFiles]
+    }));
+  };
+
+  // Research file remove handler
+  const removeResearchFile = (index) => {
+    setFormData(prev => ({
+      ...prev,
+      researchFiles: prev.researchFiles.filter((_, i) => i !== index)
+    }));
+  };
+
+  const handleSubmit = async () => {
+    // Validation
+    if (!formData.fullName || !formData.email || !formData.mobile) {
+      alert("Please fill in all required fields (Name, Email, Mobile)");
+      return;
     }
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+
+    if (!agreed) {
+      alert("Please confirm that the information is honest and accurate");
+      return;
+    }
+
+    if (!formData.authorityIncidents) {
+      alert("Please describe THREE authority incidents as mentioned");
+      return;
+    }
+
+    // Check if professional status is selected
+    if (selectedStatus.length === 0) {
+      alert("Please select your current professional status");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Create FormData object for file upload
+      const formDataToSend = new FormData();
+      
+      // Append all form fields - सीधे formData से append करें
+      Object.keys(formData).forEach(key => {
+        // Skip file arrays, they will be appended separately
+        if (key !== 'uploadedFiles' && key !== 'researchFiles') {
+          formDataToSend.append(key, formData[key] || '');
+        }
+      });
+      
+      // Append status and pgStatus
+      formDataToSend.append('professionalStatus', selectedStatus[0] || "");
+      formDataToSend.append('pgStatus', pgStatus);
+      formDataToSend.append('phdSeriousness', phdValue.toString());
+      
+      // Append marksheets
+      formData.uploadedFiles.forEach(file => {
+        formDataToSend.append('marksheets', file);
+      });
+      
+      // Append research papers
+      formData.researchFiles.forEach(file => {
+        formDataToSend.append('researchPapers', file);
+      });
+
+      console.log("Submitting form with:", {
+        marksheets: formData.uploadedFiles.length,
+        researchPapers: formData.researchFiles.length
+      });
+      
+      const response = await axiosInstance.post("/shodh-sutra/submit", formDataToSend, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      
+      console.log("Response received:", response.data);
+      
+      alert("Profile submitted successfully! We'll contact you soon.");
+      
+      // Reset form after successful submission
+      setFormData({
+        fullName: "",
+        email: "",
+        mobile: "",
+        cityCountry: "",
+        age: "",
+        class10Board: "",
+        class10Year: "",
+        class10Percentage: "",
+        class12Stream: "",
+        class12Board: "",
+        class12Year: "",
+        class12Percentage: "",
+        graduationDegree: "",
+        graduationSpecialisation: "",
+        graduationUniversity: "",
+        graduationMode: "",
+        graduationAdmissionYear: "",
+        graduationPassingYear: "",
+        graduationPercentage: "",
+        pgDegree: "",
+        pgSpecialisation: "",
+        pgUniversity: "",
+        pgAdmissionYear: "",
+        pgPassingYear: "",
+        pgMode: "",
+        pgPercentage: "",
+        jobTitle: "",
+        industry: "",
+        organisation: "",
+        firstJobYear: "",
+        experienceYears: "",
+        jobHistory: "",
+        businessNature: "",
+        businessStartYear: "",
+        previousWork: "",
+        currentRole: "",
+        responsibilities: "",
+        consultantExpertise: "",
+        consultantExperience: "",
+        consultantClients: "",
+        academicInstitution: "",
+        academicDesignation: "",
+        academicSubjects: "",
+        academicExperience: "",
+        totalResearchPapers: "",
+        otherUniversityResearch: "",
+        otherUniversitySession: "",
+        existingResearch: "",
+        seminarsAttended: "",
+        researchFields: "",
+        researchFiles: [],
+        uploadedFiles: [],
+        professionalGoals: "",
+        blockers: "",
+        underUtilised: "",
+        authorityIncidents: "",
+        phdWhy: "",
+        phdBenefits: "",
+        phdReason: "",
+        nicheHelp: "",
+        nicheExpertise: "",
+        nicheIdeal: "",
+        lifeLessons: "",
+        heardFrom: "",
+        expectations: "",
+        phdHelp: "",
+        sessionValue: "",
+        weeklyHours: "",
+        fears: "",
+        honestAdvice: "",
+      });
+      setPhdValue(5);
+      setPgStatus("");
+      setSelectedStatus([]);
+      setAgreed(false);
+      
+    } catch (err) {
+      console.error("Submission error details:", err);
+      console.error("Error response:", err.response?.data);
+      
+      if (err.response?.data?.message) {
+        alert(`Submission failed: ${err.response.data.message}`);
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   // Add professional details sections for each status
   const renderProfessionalDetails = () => {
@@ -997,7 +1053,104 @@ export default function ShodhSutraForm() {
       {/* Conditional Professional Details */}
       {renderProfessionalDetails()}
 
-      {/* SECTION: Marksheet Upload (Professional Goals के ऊपर) */}
+      {/* SECTION: Research & Publications */}
+      <section className="ss-section">
+        <h2 className="ss-heading">Research & Publications</h2>
+
+        <div className="ss-row">
+          <div className="ss-field">
+            <label>Total Research Papers Published</label>
+            <input
+              className="ss-input"
+              name="totalResearchPapers"
+              type="number"
+              value={formData.totalResearchPapers}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+
+        <div className="ss-field">
+          <label>
+            If taken admission in Research Program in any other University
+            (Mention University Name & Session)
+          </label>
+          <textarea
+            className="ss-textarea"
+            name="otherUniversityResearch"
+            value={formData.otherUniversityResearch}
+            onChange={handleChange}
+            rows="2"
+          />
+        </div>
+
+        <div className="ss-field">
+          <label>Existing Research (If Any)</label>
+          <textarea
+            className="ss-textarea"
+            name="existingResearch"
+            value={formData.existingResearch}
+            onChange={handleChange}
+            rows="3"
+          />
+        </div>
+
+        <div className="ss-field">
+          <label>Seminars / Conferences Attended</label>
+          <textarea
+            className="ss-textarea"
+            name="seminarsAttended"
+            value={formData.seminarsAttended}
+            onChange={handleChange}
+            rows="3"
+          />
+        </div>
+
+        <div className="ss-field">
+          <label>Fields of Research Papers</label>
+          <textarea
+            className="ss-textarea"
+            name="researchFields"
+            value={formData.researchFields}
+            onChange={handleChange}
+            rows="2"
+          />
+        </div>
+
+        <div className="ss-field">
+          <label>
+            Upload Research Papers / Seminar Certificates (PDF, JPG, PNG only)
+          </label>
+          <input
+            type="file"
+            accept=".pdf,.jpg,.jpeg,.png"
+            multiple
+            onChange={handleResearchFileUpload}
+          />
+
+          {formData.researchFiles.length > 0 && (
+            <div className="uploaded-files">
+              <h4>Research Files:</h4>
+              <ul>
+                {formData.researchFiles.map((file, index) => (
+                  <li key={index}>
+                    <span>{file.name} ({(file.size / 1024 / 1024).toFixed(2)} MB)</span>
+                    <button 
+                      type="button" 
+                      onClick={() => removeResearchFile(index)}
+                      className="remove-file-btn"
+                    >
+                      Remove
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* SECTION: Marksheet Upload */}
       <section className="ss-section">
         <h2 className="ss-heading">Document Upload</h2>
         <div className="ss-field">
@@ -1029,7 +1182,7 @@ export default function ShodhSutraForm() {
             </label>
           </div>
           
-          {formData.uploadedFiles && formData.uploadedFiles.length > 0 && (
+          {formData.uploadedFiles.length > 0 && (
             <div className="uploaded-files">
               <h4>Uploaded Files:</h4>
               <ul>
