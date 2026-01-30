@@ -369,19 +369,28 @@
 
 
 
-/* Mobile only */
+
+
+.mobile-sidebar-bottom {
+  display: none;
+}
 @media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
   .mobile-sidebar-bottom {
+    display: flex;
     margin-top: auto;
     background: #f7b500; /* Yellow */
     padding: 20px;
-    display: flex;
     flex-direction: column;
     gap: 12px;
   }
 
   .mobile-sidebar-bottom a {
-    background: #ffffff;
+    background: #fff;
     color: #000;
     text-align: center;
     padding: 12px;
