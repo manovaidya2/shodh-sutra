@@ -1055,22 +1055,8 @@ export default function ShodhSutraForm() {
 
       {/* SECTION: Research & Publications */}
       <section className="ss-section">
-        <h2 className="ss-heading">Research & Publications</h2>
-
-        <div className="ss-row">
-          <div className="ss-field">
-            <label>Total Research Papers Published</label>
-            <input
-              className="ss-input"
-              name="totalResearchPapers"
-              type="number"
-              value={formData.totalResearchPapers}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
-
-        <div className="ss-field">
+        <h2 className="ss-heading">Rearch & publication history (if any)</h2>
+     <div className="ss-field">
           <label>
             If taken admission in Research Program in any other University
             (Mention University Name & Session)
@@ -1084,8 +1070,11 @@ export default function ShodhSutraForm() {
           />
         </div>
 
+       
+
+   
         <div className="ss-field">
-          <label>Existing Research (If Any)</label>
+          <label>Existing Research </label>
           <textarea
             className="ss-textarea"
             name="existingResearch"
@@ -1094,7 +1083,16 @@ export default function ShodhSutraForm() {
             rows="3"
           />
         </div>
-
+ <div className="ss-field">
+          <label>Fields of Research Papers</label>
+          <textarea
+            className="ss-textarea"
+            name="researchFields"
+            value={formData.researchFields}
+            onChange={handleChange}
+            rows="2"
+          />
+        </div>
         <div className="ss-field">
           <label>Seminars / Conferences Attended</label>
           <textarea
@@ -1106,17 +1104,19 @@ export default function ShodhSutraForm() {
           />
         </div>
 
-        <div className="ss-field">
-          <label>Fields of Research Papers</label>
-          <textarea
-            className="ss-textarea"
-            name="researchFields"
-            value={formData.researchFields}
-            onChange={handleChange}
-            rows="2"
-          />
+       
+ <div className="ss-row">
+          <div className="ss-field">
+            <label>Total Research Papers Published</label>
+            <input
+              className="ss-input"
+              name="totalResearchPapers"
+              type="number"
+              value={formData.totalResearchPapers}
+              onChange={handleChange}
+            />
+          </div>
         </div>
-
         <div className="ss-field">
           <label>
             Upload Research Papers / Seminar Certificates (PDF, JPG, PNG only)
