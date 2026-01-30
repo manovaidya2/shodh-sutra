@@ -79,26 +79,34 @@ const Header = () => {
           </div>
 
           {/* Navigation */}
-          <nav className={`nav ${menuOpen ? "open" : ""}`}>
-            <div className="close-btn" onClick={() => setMenuOpen(false)}>
-              <FaTimes />
-            </div>
+  <nav className={`nav ${menuOpen ? "open" : ""}`}>
+  <div className="close-btn" onClick={() => setMenuOpen(false)}>
+    <FaTimes />
+  </div>
 
-            <a href="/">Home</a>
+  <a href="/">Home</a>
 
-            <div className="dropdown">
-              <a href="#">About Us ▽</a>
-              <div className="dropdown-menu">
-                <a href="/about">Meet ShodhSutra</a>
-                <a href="/whyprusuie">Why Pursue a PhD?</a>
-              </div>
-            </div>
+  <div className="dropdown">
+    <a href="#">About Us ▽</a>
+    <div className="dropdown-menu">
+      <a href="/about">Meet ShodhSutra</a>
+      <a href="/whyprusuie">Why Pursue a PhD?</a>
+    </div>
+  </div>
 
-            <a href="/process">Process</a>
-            <a href="/discipline">Disciplines</a>
-            <a href="/guide">Guides</a>
-            <a href="/contact">Contact Us</a>
-          </nav>
+  <a href="/process">Process</a>
+  <a href="/discipline">Disciplines</a>
+  <a href="/guide">Guides</a>
+  <a href="/contact">Contact Us</a>
+
+  {/* 👇 Yellow section */}
+  <div className="mobile-sidebar-bottom">
+    <a href="/shodh-sutra-form">For Students</a>
+    <a href="#">For Mentors</a>
+    <a href="#">For Institutions</a>
+  </div>
+</nav>
+
 
           {/* Apply Now Button */}
           <button

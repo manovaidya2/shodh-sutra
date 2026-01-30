@@ -362,3 +362,41 @@
     padding-top: 70px;   /* adjust based on mobile header height */
   }
 }
+
+
+
+
+
+/* Sidebar must be column */
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .mobile-sidebar-bottom {
+    margin-top: auto;
+    background: #f7b500; /* Yellow */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-sidebar-bottom a {
+    background: #ffffff;
+    color: #000;
+    text-align: center;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .mobile-sidebar-bottom a:hover {
+    background: #000;
+    color: #fff;
+  }
+}
