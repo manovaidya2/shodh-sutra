@@ -1,0 +1,116 @@
+.apf-wrapper {
+  margin: 100px auto 100px auto; /* Desktop default */
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .apf-wrapper {
+    margin: 50px auto 50px auto; /* Mobile me top/bottom margin kam */
+    padding: 20px; /* Optional: padding bhi thoda kam kar sakte ho */
+  }
+}
+
+@media (max-width: 480px) {
+  .apf-wrapper {
+    margin: 30px auto 30px auto; /* Chhote screens ke liye aur kam */
+    padding: 15px;
+  }
+}
+
+.apf-title {
+  text-align: center;
+  color: #1a237e;
+}
+
+.apf-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.apf-section {
+  margin-bottom: 30px;
+}
+
+.apf-heading {
+  margin-bottom: 15px;
+  color: #283593;
+  border-left: 4px solid #3949ab;
+  padding-left: 10px;
+}
+
+.apf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.apf-input,
+.apf-textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.apf-textarea {
+  grid-column: 1 / -1;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.apf-input:focus,
+.apf-textarea:focus {
+  border-color: #3949ab;
+  outline: none;
+}
+
+.apf-consent {
+  margin-bottom: 20px;
+}
+
+.apf-checkbox {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.apf-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #3949ab, #1a237e);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apf-submit-btn:hover {
+  opacity: 0.9;
+}
+
+
+
+.apf-question {
+  font-weight: 500;
+  margin: 15px 0 8px;
+}
+
+.apf-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.apf-options label {
+  font-size: 14px;
+}

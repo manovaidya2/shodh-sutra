@@ -1054,101 +1054,114 @@ export default function ShodhSutraForm() {
       {renderProfessionalDetails()}
 
       {/* SECTION: Research & Publications */}
-      <section className="ss-section">
-        <h2 className="ss-heading">Rearch & publication history (if any)</h2>
-     <div className="ss-field">
-          <label>
-            If taken admission in Research Program in any other University
-            (Mention University Name & Session)
-          </label>
-          <textarea
-            className="ss-textarea"
-            name="otherUniversityResearch"
-            value={formData.otherUniversityResearch}
-            onChange={handleChange}
-            rows="2"
-          />
-        </div>
-
-       
-
    
-        <div className="ss-field">
-          <label>Existing Research </label>
-          <textarea
-            className="ss-textarea"
-            name="existingResearch"
-            value={formData.existingResearch}
-            onChange={handleChange}
-            rows="3"
-          />
-        </div>
- <div className="ss-field">
-          <label>Fields of Research Papers</label>
-          <textarea
-            className="ss-textarea"
-            name="researchFields"
-            value={formData.researchFields}
-            onChange={handleChange}
-            rows="2"
-          />
-        </div>
-        <div className="ss-field">
-          <label>Seminars / Conferences Attended</label>
-          <textarea
-            className="ss-textarea"
-            name="seminarsAttended"
-            value={formData.seminarsAttended}
-            onChange={handleChange}
-            rows="3"
-          />
-        </div>
-
-       
- <div className="ss-row">
-          <div className="ss-field">
-            <label>Total Research Papers Published</label>
-            <input
-              className="ss-input"
-              name="totalResearchPapers"
-              type="number"
-              value={formData.totalResearchPapers}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
-        <div className="ss-field">
-          <label>
-            Upload Research Papers / Seminar Certificates (PDF, JPG, PNG only)
-          </label>
-          <input
-            type="file"
-            accept=".pdf,.jpg,.jpeg,.png"
-            multiple
-            onChange={handleResearchFileUpload}
-          />
-
-          {formData.researchFiles.length > 0 && (
-            <div className="uploaded-files">
-              <h4>Research Files:</h4>
-              <ul>
-                {formData.researchFiles.map((file, index) => (
-                  <li key={index}>
-                    <span>{file.name} ({(file.size / 1024 / 1024).toFixed(2)} MB)</span>
-                    <button 
-                      type="button" 
-                      onClick={() => removeResearchFile(index)}
-                      className="remove-file-btn"
-                    >
-                      Remove
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </section>
+<section className="ss-section">
+  <h2 className="ss-heading">Research & Publication History (if any)</h2> {/* Fixed typo */}
+  
+  <div className="ss-row">
+    <div className="ss-field">
+      <label>Total Research Papers Published</label>
+      <input
+        className="ss-input"
+        name="totalResearchPapers"
+        type="number"
+        value={formData.totalResearchPapers}
+        onChange={handleChange}
+      />
+    </div>
+  </div>
+  
+  <div className="ss-field">
+    <label>
+      If taken admission in Research Program in any other University
+      (Mention University Name & Session)
+    </label>
+    <textarea
+      className="ss-textarea"
+      name="otherUniversityResearch"
+      value={formData.otherUniversityResearch}
+      onChange={handleChange}
+      rows="2"
+    />
+  </div>
+  
+  <div className="ss-field">
+    <label>Existing Research</label>
+    <textarea
+      className="ss-textarea"
+      name="existingResearch"
+      value={formData.existingResearch}
+      onChange={handleChange}
+      rows="3"
+    />
+  </div>
+  
+  <div className="ss-field">
+    <label>Fields of Research Papers</label>
+    <textarea
+      className="ss-textarea"
+      name="researchFields"
+      value={formData.researchFields}
+      onChange={handleChange}
+      rows="2"
+    />
+  </div>
+  
+  <div className="ss-field">
+    <label>Seminars / Conferences Attended</label>
+    <textarea
+      className="ss-textarea"
+      name="seminarsAttended"
+      value={formData.seminarsAttended}
+      onChange={handleChange}
+      rows="3"
+    />
+  </div>
+  
+  {/* Reorder the session field to be with otherUniversityResearch */}
+  <div className="ss-field">
+    <label>Session (if any)</label>
+    <input
+      className="ss-input"
+      name="otherUniversitySession"
+      value={formData.otherUniversitySession}
+      onChange={handleChange}
+      placeholder="e.g., 2023-2024"
+    />
+  </div>
+  
+  <div className="ss-field">
+    <label>
+      Upload Research Papers / Seminar Certificates (PDF, JPG, PNG only)
+    </label>
+    <input
+      type="file"
+      accept=".pdf,.jpg,.jpeg,.png"
+      multiple
+      onChange={handleResearchFileUpload}
+    />
+    
+    {formData.researchFiles.length > 0 && (
+      <div className="uploaded-files">
+        <h4>Research Files:</h4>
+        <ul>
+          {formData.researchFiles.map((file, index) => (
+            <li key={index}>
+              <span>{file.name} ({(file.size / 1024 / 1024).toFixed(2)} MB)</span>
+              <button 
+                type="button" 
+                onClick={() => removeResearchFile(index)}
+                className="remove-file-btn"
+              >
+                Remove
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+</section>
 
       {/* SECTION: Marksheet Upload */}
       <section className="ss-section">
