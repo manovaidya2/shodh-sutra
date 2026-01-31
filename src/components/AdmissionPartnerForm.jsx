@@ -1,4 +1,5 @@
-import "../styles/institution.css";
+import React from "react";
+import "../styles/Institution.css";
 import { useState } from "react";
 import axiosInstance from "../api/axiosInstance";
 

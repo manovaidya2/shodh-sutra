@@ -14,7 +14,8 @@ import PhDConsultation from './Home/PhDConsultation.jsx';
 import Guide from './pages/Guide';
 import ApplyNow from './components/ApplyNow.jsx';
 import ShodhSutraForm from './components/ShodhSutraForm.jsx';
-import Institution from './components/AdmissionPartnerForm.jsx';
+
+import AdmissionPartnerForm from './components/AdmissionPartnerForm.jsx';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
              <Route path="/guide" element={<Guide/>} />
              <Route path="/apply-now" element={<ApplyNow/>} />
              <Route path="/shodh-sutra-form" element={<ShodhSutraForm/>} />
-             <Route path="/institution" element={<Institution />} />
+             <Route path="/admission-partner-form" element={<AdmissionPartnerForm />} />
              
       </Routes>
       <Footer />
