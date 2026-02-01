@@ -55,7 +55,7 @@ const Header = () => {
 
           <div className="top-links">
             <a href="/shodh-sutra-form">For Students</a>
-            <a href="#">For Mentors</a>
+            <a href="/mentor-form">For Mentors</a>
             <a href="/admission-partner-form">For Institutions</a>
             <FaFacebookF className="social-icon" />
             <FaLinkedinIn className="social-icon" />
@@ -124,8 +124,8 @@ const Header = () => {
           {/* Yellow section */}
           <div className="mobile-sidebar-bottom">
             <a href="/shodh-sutra-form" onClick={() => setMenuOpen(false)}>For Students</a>
-            <a href="#" onClick={() => setMenuOpen(false)}>For Mentors</a>
-            <a href="#" onClick={() => setMenuOpen(false)}>For Institutions</a>
+            <a href="/mentor-form" onClick={() => setMenuOpen(false)}>For Mentors</a>
+            <a href="/admission-partner-form" onClick={() => setMenuOpen(false)}>For Institutions</a>
           </div>
         </div>
       </div>

@@ -1,165 +1,573 @@
-/* Main Wrapper - Jaisa apf-wrapper hai */
+/* Main Container */
 .mentor-form {
-  max-width: 1200px;
-  margin: 80px auto; 
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  font-family: "Segoe UI", sans-serif;
+ 
+  margin: 60px auto;
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(26, 35, 126, 0.1);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   box-sizing: border-box;
+  border: 1px solid #e8eaf6;
 }
 
-/* --- HEADER SECTION --- */
+/* Header */
 .mentor-form h1 {
   text-align: center;
   color: #1a237e;
-  font-size: 32px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 5px;
+  position: relative;
+  padding-bottom: 15px;
 }
 
-/* Subtitle matching apf-subtitle */
 .mentor-form h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #3949ab, #5c6bc0);
+  border-radius: 2px;
+}
+
+.mentor-form h1::before {
   content: "One Stop Solution to Research Education";
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  color: #555;
+  color: #5c6bc0;
   margin-top: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
-/* --- SECTION STYLE --- */
+/* Sections */
 .mentor-form section {
   margin-bottom: 40px;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(26, 35, 126, 0.05);
+  border: 1px solid #e8eaf6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Vertical Blue Bar jaisa apf-heading mein hai */
+.mentor-form section:hover {
+  box-shadow: 0 8px 25px rgba(26, 35, 126, 0.08);
+}
+
+/* Section Title */
 .section-title {
-  font-size: 22px;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #283593;
-  margin-bottom: 20px;
-  border-left: 5px solid #1a237e;
-  padding-left: 15px;
-  text-transform: capitalize;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #e8eaf6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
 }
 
-/* --- INPUT GRID (4 Columns for Desktop) --- */
-.mentor-row, 
-.research-row, 
-.prof-row,
-.contact-row,
-.education-table {
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3949ab, #7986cb);
+  border-radius: 2px;
+}
+
+/* Form Rows - 3 columns for desktop */
+.form-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Matching your reference image */
-  gap: 15px;
-  margin-bottom: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: start;
 }
 
-/* --- FORM CONTROLS --- */
-/* Cream/Beige background colors to match image */
+/* For rows that need different column counts */
+.form-row-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-row-1 {
+  grid-template-columns: 1fr;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3949ab;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-group label::after {
+  content: "*";
+  color: #f44336;
+  display: none;
+}
+
+.form-group.required label::after {
+  display: inline;
+}
+
+/* Input Fields */
 .mentor-form input,
 .mentor-form select,
 .mentor-form textarea {
   width: 100%;
-  padding: 14px;
-  background-color: #fdf2d9; /* Light Beige */
-  border: 1px solid #e0d4ba;
-  border-radius: 8px;
-  font-size: 15px;
+  padding: 14px 16px;
+  background: #f5f7ff;
+  border: 2px solid #e3e7ff;
+  border-radius: 10px;
+  font-size: 0.95rem;
   color: #333;
   box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Placeholder color */
-.mentor-form input::placeholder {
-  color: #888;
-}
-
-/* Focus state matching Institutional UI */
 .mentor-form input:focus,
+.mentor-form select:focus,
 .mentor-form textarea:focus {
-  border-color: #1a237e;
   outline: none;
-  box-shadow: 0 0 5px rgba(26, 35, 126, 0.2);
+  border-color: #3949ab;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.1);
 }
 
-/* Full width for textareas */
+.mentor-form input::placeholder {
+  color: #7986cb;
+  opacity: 0.7;
+}
+
+/* Textarea specific */
 .mentor-form textarea {
-  grid-column: 1 / -1;
-  min-height: 100px;
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
 }
 
-/* --- Q&A / OPTIONS GRID --- */
+/* Education Table */
+.education-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.edu-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+  background: #f5f7ff;
+  border-radius: 10px;
+  border: 1px solid #e3e7ff;
+}
+
+.edu-row > div:first-child {
+  font-weight: 500;
+  color: #3949ab;
+  display: flex;
+  align-items: center;
+}
+
+/* File Input */
+.file-input-wrapper {
+  position: relative;
+}
+
+.file-input-wrapper input[type="file"] {
+  padding: 12px;
+  border: 2px dashed #c5cae9;
+  background: #f5f7ff;
+  cursor: pointer;
+}
+
+.file-input-wrapper input[type="file"]:hover {
+  border-color: #3949ab;
+  background: #e8eaf6;
+}
+
+.file-preview {
+  font-size: 0.85rem;
+  color: #388e3c;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.file-preview::before {
+  content: "✓";
+  color: #388e3c;
+}
+
+/* Question Sections */
+.question-block {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f5f7ff;
+  border-radius: 12px;
+  border-left: 4px solid #3949ab;
+}
+
 .question {
   font-weight: 600;
   color: #1a237e;
-  margin: 20px 0 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
+.question span {
+  font-weight: 400;
+  color: #5c6bc0;
+  font-size: 0.9rem;
+}
+
+/* Option Grid - 3 columns for desktop */
 .option-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns for checkboxes/radios */
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
 }
 
+/* Checkbox/Radio Options */
 .check-option {
-  display: flex !important;
+  display: flex;
   align-items: center;
-  padding: 12px;
-  background: #fdf2d9;
-  border: 1px solid #e0d4ba;
+  padding: 12px 15px;
+  background: white;
+  border: 2px solid #e3e7ff;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.9rem;
+  color: #3949ab;
+  transition: all 0.2s ease;
 }
 
-/* Checkbox alignment fix */
-.check-option input {
-  width: 18px !important;
-  margin-right: 12px !important;
+.check-option:hover {
+  border-color: #3949ab;
+  background: #e8eaf6;
+  transform: translateY(-2px);
+}
+
+.check-option input[type="checkbox"],
+.check-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  accent-color: #3949ab;
   cursor: pointer;
 }
 
-/* --- SUBMIT BUTTON --- */
+/* Reflection Textareas */
+.reflection-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 15px;
+  background: white;
+  border: 2px solid #e3e7ff;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  resize: vertical;
+  font-family: 'Inter', sans-serif;
+}
+
+.reflection-textarea:focus {
+  outline: none;
+  border-color: #3949ab;
+  box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.1);
+}
+
+/* Consent Section */
+.consent-section {
+  background: linear-gradient(135deg, #f5f7ff 0%, #e8eaf6 100%);
+  border: 2px solid #c5cae9;
+}
+
+.consent-text {
+  color: #5c6bc0;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.consent-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #e3e7ff;
+  font-weight: 500;
+  color: #1a237e;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.consent-checkbox:hover {
+  border-color: #3949ab;
+  background: #f5f7ff;
+}
+
+.consent-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #3949ab;
+  cursor: pointer;
+}
+
+/* Submit Button */
 .submit-btn {
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   display: block;
-  margin: 50px auto 0;
-  padding: 16px;
-  background: linear-gradient(135deg, #3949ab, #1a237e);
+  margin: 40px auto 20px;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #3949ab 0%, #283593 100%);
   color: white;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 600;
   border: none;
-  border-radius: 50px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
 }
 
 .submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(26, 35, 126, 0.25);
+  background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
+.submit-btn:active {
+  transform: translateY(-1px);
+}
+
+.submit-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.submit-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
 @media (max-width: 1024px) {
-  .mentor-row, .contact-row, .education-table {
+  .mentor-form {
+    padding: 25px;
+    margin: 30px 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .edu-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .edu-row > div:first-child {
+    grid-column: 1 / -1;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e3e7ff;
+  }
+  
+  .option-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .mentor-form {
-    margin: 40px auto;
-    padding: 20px;
+    padding: 20px 15px;
+    margin: 20px 10px;
+    border-radius: 15px;
   }
-  .mentor-row, .contact-row, .option-grid {
+  
+  .mentor-form h1 {
+    font-size: 1.8rem;
+  }
+  
+  .mentor-form h1::before {
+    font-size: 0.9rem;
+  }
+  
+  .mentor-form section {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Single column for mobile */
+  .form-row,
+  .form-row-2,
+  .form-row-1 {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
+  
+  .option-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .mentor-form input,
+  .mentor-form select,
+  .mentor-form textarea {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+  
+  .check-option {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .question-block {
+    padding: 15px;
+  }
+  
+  .question {
+    font-size: 0.95rem;
+  }
+  
   .submit-btn {
+    padding: 16px 30px;
+    font-size: 1rem;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Education table becomes vertical cards on mobile */
+  .education-table {
+    gap: 12px;
+  }
+  
+  .edu-row {
+    padding: 15px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .edu-row::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #3949ab;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .edu-row > div:first-child {
+    display: none;
+  }
+  
+  .edu-row input {
     width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .mentor-form {
+    padding: 15px 10px;
+    margin: 10px 5px;
+  }
+  
+  .mentor-form h1 {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+    padding-left: 10px;
+  }
+  
+  .section-title::after {
+    width: 60px;
+  }
+  
+  .mentor-form section {
+    padding: 15px 12px;
+  }
+  
+  .submit-btn {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .mentor-form {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-color: #3949ab;
+  }
+  
+  .mentor-form section {
+    background: #0f3460;
+    border-color: #3949ab;
+    color: #e3f2fd;
+  }
+  
+  .mentor-form input,
+  .mentor-form select,
+  .mentor-form textarea {
+    background: #1e1e2e;
+    border-color: #3949ab;
+    color: #e3f2fd;
+  }
+  
+  .check-option {
+    background: #1e1e2e;
+    border-color: #3949ab;
+    color: #e3f2fd;
+  }
+  
+  .question-block {
+    background: #1a237e;
   }
 }
