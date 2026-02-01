@@ -16,6 +16,7 @@ import ApplyNow from './components/ApplyNow.jsx';
 import ShodhSutraForm from './components/ShodhSutraForm.jsx';
 
 import AdmissionPartnerForm from './components/AdmissionPartnerForm.jsx';
+import MentorProfileForm from './components/MentorProfileForm.jsx';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
              <Route path="/apply-now" element={<ApplyNow/>} />
              <Route path="/shodh-sutra-form" element={<ShodhSutraForm/>} />
              <Route path="/admission-partner-form" element={<AdmissionPartnerForm />} />
+             <Route path="/mentor-form" element={<MentorProfileForm/>} />
              
       </Routes>
       <Footer />
