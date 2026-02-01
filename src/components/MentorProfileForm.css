@@ -2,10 +2,10 @@
 .mentor-form {
  
   margin: 60px auto;
-  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(26, 35, 126, 0.1);
+ 
   font-family: 'Inter', 'Segoe UI', sans-serif;
   box-sizing: border-box;
   border: 1px solid #e8eaf6;
@@ -134,7 +134,7 @@
 .mentor-form textarea {
   width: 100%;
   padding: 14px 16px;
-  background: #f5f7ff;
+  
   border: 2px solid #e3e7ff;
   border-radius: 10px;
   font-size: 0.95rem;
@@ -177,7 +177,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
   padding: 15px;
-  background: #f5f7ff;
+  
   border-radius: 10px;
   border: 1px solid #e3e7ff;
 }
@@ -197,7 +197,7 @@
 .file-input-wrapper input[type="file"] {
   padding: 12px;
   border: 2px dashed #c5cae9;
-  background: #f5f7ff;
+  
   cursor: pointer;
 }
 
@@ -224,7 +224,7 @@
 .question-block {
   margin-bottom: 30px;
   padding: 20px;
-  background: #f5f7ff;
+ 
   border-radius: 12px;
   border-left: 4px solid #3949ab;
 }
@@ -301,7 +301,7 @@
 
 /* Consent Section */
 .consent-section {
-  background: linear-gradient(135deg, #f5f7ff 0%, #e8eaf6 100%);
+  background: linear-gradient(135deg, #e8eaf6 100%);
   border: 2px solid #c5cae9;
 }
 
@@ -327,7 +327,7 @@
 
 .consent-checkbox:hover {
   border-color: #3949ab;
-  background: #f5f7ff;
+  
 }
 
 .consent-checkbox input[type="checkbox"] {
@@ -541,33 +541,3 @@
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .mentor-form {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border-color: #3949ab;
-  }
-  
-  .mentor-form section {
-    background: #0f3460;
-    border-color: #3949ab;
-    color: #e3f2fd;
-  }
-  
-  .mentor-form input,
-  .mentor-form select,
-  .mentor-form textarea {
-    background: #1e1e2e;
-    border-color: #3949ab;
-    color: #e3f2fd;
-  }
-  
-  .check-option {
-    background: #1e1e2e;
-    border-color: #3949ab;
-    color: #e3f2fd;
-  }
-  
-  .question-block {
-    background: #1a237e;
-  }
-}
