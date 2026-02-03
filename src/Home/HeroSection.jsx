@@ -15,11 +15,11 @@ const HeroSection = () => {
 
           <h1>
             Advance Knowledge. Lead Innovation.
-            <br /> Begin Your PhD with <span>SodhSutra.</span>
+            <br /> Begin Your PhD with <span>ShodhSutra.</span>
           </h1>
 
           <p className="desc">
-            SodhSutra empowers aspiring researchers with expert guidance,
+            ShodhSutra empowers aspiring researchers with expert guidance,
             structured mentorship, and end-to-end support throughout their PhD
             journey.
           </p>

@@ -57,6 +57,7 @@ const Header = () => {
             <a href="/shodh-sutra-form">For Students</a>
             <a href="/mentor-form">For Mentors</a>
             <a href="/admission-partner-form">For Institutions</a>
+            <a href="/university-partner-form">For Universities</a>
             <FaFacebookF className="social-icon" />
             <FaLinkedinIn className="social-icon" />
           </div>
@@ -126,6 +127,7 @@ const Header = () => {
             <a href="/shodh-sutra-form" onClick={() => setMenuOpen(false)}>For Students</a>
             <a href="/mentor-form" onClick={() => setMenuOpen(false)}>For Mentors</a>
             <a href="/admission-partner-form" onClick={() => setMenuOpen(false)}>For Institutions</a>
+            <a href="/university-partner-form" onClick={() => setMenuOpen(false)}>For Universities</a>
           </div>
         </div>
       </div>

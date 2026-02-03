@@ -17,6 +17,7 @@ import ShodhSutraForm from './components/ShodhSutraForm.jsx';
 
 import AdmissionPartnerForm from './components/AdmissionPartnerForm.jsx';
 import MentorProfileForm from './components/MentorProfileForm.jsx';
+import Universityform from './components/UniversityAssociationForm.jsx';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
              <Route path="/shodh-sutra-form" element={<ShodhSutraForm/>} />
              <Route path="/admission-partner-form" element={<AdmissionPartnerForm />} />
              <Route path="/mentor-form" element={<MentorProfileForm/>} />
+             <Route path="/university-partner-form" element={<Universityform/>} />
              
       </Routes>
       <Footer />

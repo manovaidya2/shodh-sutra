@@ -7,7 +7,7 @@ function WhySodhSutra() {
     <section className="why-section">
       {/* Left Content */}
       <div className="why-content">
-        <h2>Why SodhSutra?</h2>
+        <h2>Why ShodhSutra?</h2>
         <p className="why-intro">
           Whether you're a working professional, an academician, or a passionate learner, 
           we provide the roadmap, resources, and recognition to help you earn your doctoral 
