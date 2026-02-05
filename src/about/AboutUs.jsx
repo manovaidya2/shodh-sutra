@@ -14,22 +14,22 @@ function AboutUs() {
     <>
       {/* Hero Section */}
       <section
-        className="about-hero"
+        className="about-hero1"
         style={{ backgroundImage: `url(${aboutBg})` }}
       >
-        <div className="overlay">
-          <p className="small-title">Meet ShodhSutra</p>
+        <div className="overlay1">
+          <p className="small-title1">Meet ShodhSutra</p>
           <h1>
             About ShodhSutra – Your Gateway to
             <br /> Doctoral Excellence
           </h1>
-          <p className="description">
+          <p className="description1">
             ShodhSutra is your trusted companion on the journey to a PhD. We provide expert guidance,
             essential resources, and dedicated mentorship to help aspiring researchers achieve
             academic excellence, contribute original knowledge, and create a meaningful impact in
             their fields.
           </p>
-          <button className="explore-btn">Explore More</button>
+          <button className="explore-btn1">Explore More</button>
         </div>
       </section>
 
