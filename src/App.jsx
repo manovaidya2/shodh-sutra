@@ -18,6 +18,9 @@ import ShodhSutraForm from './components/ShodhSutraForm.jsx';
 import AdmissionPartnerForm from './components/AdmissionPartnerForm.jsx';
 import MentorProfileForm from './components/MentorProfileForm.jsx';
 import Universityform from './components/UniversityAssociationForm.jsx';
+import ScholarshipForm from './components/ScholarshipForm.jsx';
+import AdmissionOfferForm from './components/PhdAdmissionForm.jsx';
+import CommonEntranceExamForm from './components/CommonEntranceExam.jsx';
 
 function App() {
   return (
@@ -37,6 +40,10 @@ function App() {
              <Route path="/admission-partner-form" element={<AdmissionPartnerForm />} />
              <Route path="/mentor-form" element={<MentorProfileForm/>} />
              <Route path="/university-partner-form" element={<Universityform/>} />
+             <Route path="/scholarship-form" element={<ScholarshipForm />} />
+             <Route path="/admissionoffer" element={<AdmissionOfferForm />} />
+             <Route path="/common-entrance-exam" element={<CommonEntranceExamForm />} />
+             
              
       </Routes>
       <Footer />

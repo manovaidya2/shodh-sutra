@@ -365,3 +365,273 @@
   color: #fff;
   transform: rotate(90deg);
 }
+
+
+
+
+/* Scholarship Button Styles - Desktop */
+.scholarship-btn {
+  background-color: white;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 8px;
+  width: auto;
+  min-width: 85px;
+}
+
+/* Mobile Scholarship Button Styles */
+.mobile-scholarship-btn {
+  background-color: white;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  width: auto;
+  min-width: 100px;
+  margin-bottom: 8px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scholarship-btn {
+    padding: 3px 10px;
+    font-size: 16px;
+    min-width: 75px;
+  }
+  
+  .mobile-scholarship-btn {
+    width: auto;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .mobile-sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+
+/* ============ STUDENT FORMS DROPDOWN (Desktop) ============ */
+
+
+.student-dropdown-btn:hover {
+  background-color: #000;
+  color: white;
+  border-color: #000;
+}
+
+.student-dropdown-btn .dropdown-icon {
+  font-size: 12px;
+}
+
+
+
+.student-dropdown-menu a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #fcbf1ef0;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.student-dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.student-dropdown-menu a:hover {
+  background-color: #fcbf1e;
+  color: #000;
+}
+
+/* ============ MOBILE STUDENT DROPDOWN ============ */
+.mobile-student-dropdown {
+  margin: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+}
+
+.mobile-dropdown-header span {
+  font-weight: 600;
+}
+
+.dropdown-arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+  display: none;
+  padding-left: 16px;
+  animation: slideDown 0.3s ease;
+}
+
+.mobile-dropdown-menu.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-dropdown-menu a {
+  padding: 12px 16px !important;
+  margin: 4px 0 !important;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  border-bottom: none !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.mobile-dropdown-menu a:hover {
+  background-color: #fcbf1e;
+  color: #000;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ ✅ FIXED: Mobile Sidebar Bottom - HIDE ON DESKTOP ============ */
+.mobile-sidebar-bottom {
+  display: none; /* Hidden by default on desktop */
+}
+
+/* ============ MOBILE STYLES (max-width: 768px) ============ */
+@media (max-width: 768px) {
+  /* Hide desktop student dropdown on mobile */
+  .student-dropdown {
+    display: none;
+  }
+  
+  /* Show mobile student dropdown */
+  .mobile-student-dropdown {
+    display: block;
+  }
+  
+  /* ✅ SHOW mobile sidebar bottom ONLY on mobile */
+  .mobile-sidebar-bottom {
+    display: block;
+    margin-top: auto;
+    background: #fcbf1e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .mobile-sidebar-bottom a {
+    display: block;
+    background: white;
+    color: #000;
+    text-align: center;
+    padding: 12px;
+    margin: 8px 0;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: none;
+  }
+  
+  .mobile-sidebar-bottom a:hover {
+    background: #000;
+    color: #fff;
+  }
+  
+  /* Adjust top-links for mobile */
+  .top-links {
+    display: none;
+  }
+}
+
+/* ============ DESKTOP STYLES (min-width: 769px) ============ */
+@media (min-width: 769px) {
+  .mobile-student-dropdown {
+    display: none;
+  }
+  
+  .student-dropdown {
+    display: inline-block;
+  }
+  
+  /* ✅ ENSURE mobile sidebar bottom is HIDDEN on desktop */
+  .mobile-sidebar-bottom {
+    display: none !important;
+  }
+}
+
+/* ============ REMOVED/OLD STYLES ============ */
+.scholarship-btn,
+.mobile-scholarship-btn {
+  display: none;
+}
+
+/* ============ TOP LINKS ADJUSTMENT ============ */
+.top-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.top-links a {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.top-links .student-dropdown {
+  margin-right: 15px;
+}
+
+.top-links .student-dropdown:last-child {
+  margin-right: 0;
+}
+
+/* ============ DROPDOWN ICON IN MAIN NAV ============ */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown-icon {
+  font-size: 12px;
+}

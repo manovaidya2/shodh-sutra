@@ -8,11 +8,13 @@ import {
   FaBars,
   FaTimes,
   FaWhatsapp,
+  FaChevronDown,
 } from "react-icons/fa";
 import sodhLogo from "../images/sodh.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [studentDropdownOpen, setStudentDropdownOpen] = useState(false);
 
   return (
     <div>
@@ -54,7 +56,38 @@ const Header = () => {
           </div>
 
           <div className="top-links">
-            <a href="/shodh-sutra-form">For Students</a>
+            {/* ✅ NEW: Student Forms Dropdown (Desktop) */}
+            {/* Student Forms Dropdown - Desktop */}
+<div className="dropdown">
+  <a href="#" className="dropdown-toggle">
+    Student Forms <FaChevronDown className="dropdown-icon" />
+  </a>
+
+  <div className="dropdown-menu">
+
+  <a href="/shodh-sutra-form">
+    👤 Shodh Sutra Profile Form
+  </a>
+
+  <a href="/scholarship-form">
+    🎓 Scholarship Application Form
+  </a>
+
+  <a href="/admissionoffer">
+    📜 Admission Offer Form
+  </a>
+
+  <a href="/common-entrance-exam">
+    🧾 Common Entrance Exam Form
+  </a>
+
+</div>
+
+</div>
+
+
+            {/* ❌ REMOVED: Scholarship Button from here */}
+            
             <a href="/mentor-form">For Mentors</a>
             <a href="/admission-partner-form">For Institutions</a>
             <a href="/university-partner-form">For Universities</a>
@@ -81,7 +114,7 @@ const Header = () => {
 
             <div className="dropdown">
               <a href="#" className="dropdown-toggle">
-                About Us ▽
+                About Us <FaChevronDown className="dropdown-icon" />
               </a>
               <div className="dropdown-menu">
                 <a href="/about">Meet ShodhSutra</a>
@@ -122,9 +155,70 @@ const Header = () => {
           <a href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
           <a href="/whyprusuie" onClick={() => setMenuOpen(false)}>Why Pursue a PhD?</a>
           
-          {/* Yellow section */}
+          {/* ✅ NEW: Student Forms Dropdown (Mobile) */}
+          <div className="mobile-student-dropdown">
+            <div 
+              className="mobile-dropdown-header"
+              onClick={() => setStudentDropdownOpen(!studentDropdownOpen)}
+            >
+              <span>Student Forms</span>
+              <FaChevronDown className={`dropdown-arrow ${studentDropdownOpen ? 'open' : ''}`} />
+            </div>
+            
+            <div className={`mobile-dropdown-menu ${studentDropdownOpen ? 'open' : ''}`}>
+
+  {/* Shodh Sutra Profile Form */}
+  <a 
+    href="/shodh-sutra-form" 
+    onClick={() => {
+      setMenuOpen(false);
+      setStudentDropdownOpen(false);
+    }}
+  >
+    👨‍🎓 Shodh Sutra Profile Form
+  </a>
+
+  {/* Scholarship Form */}
+  <a 
+    href="/scholarship-form" 
+    onClick={() => {
+      setMenuOpen(false);
+      setStudentDropdownOpen(false);
+    }}
+  >
+    💰 Scholarship Application Form
+  </a>
+
+  {/* Admission Offer Form */}
+  <a 
+    href="/admissionoffer" 
+    onClick={() => {
+      setMenuOpen(false);
+      setStudentDropdownOpen(false);
+    }}
+  >
+    📜 Admission Offer Form
+  </a>
+
+  {/* Common Entrance Exam Form */}
+  <a 
+    href="/common-entrance-exam" 
+    onClick={() => {
+      setMenuOpen(false);
+      setStudentDropdownOpen(false);
+    }}
+  >
+    🧾 Common Entrance Exam Form
+  </a>
+
+</div>
+
+          </div>
+
+          {/* ❌ REMOVED: Mobile Scholarship Button - Ab dropdown mein hai */}
+          
+          {/* Other Forms */}
           <div className="mobile-sidebar-bottom">
-            <a href="/shodh-sutra-form" onClick={() => setMenuOpen(false)}>For Students</a>
             <a href="/mentor-form" onClick={() => setMenuOpen(false)}>For Mentors</a>
             <a href="/admission-partner-form" onClick={() => setMenuOpen(false)}>For Institutions</a>
             <a href="/university-partner-form" onClick={() => setMenuOpen(false)}>For Universities</a>
