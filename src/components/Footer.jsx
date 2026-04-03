@@ -57,7 +57,12 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        © {new Date().getFullYear()} ShodhSutra. All Rights Reserved.
+        <div className="copyright-text">
+          © {new Date().getFullYear()} ShodhSutra. All Rights Reserved.
+        </div>
+        <div className="powered-by-footer">
+          Powered by <span>EduGlobe Services FZ-LLC</span>
+        </div>
       </div>
     </footer>
   );

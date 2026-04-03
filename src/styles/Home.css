@@ -295,3 +295,48 @@
 
 
 
+/* Powered by section - Upper Left */
+.powered-by {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.powered-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.company-name {
+  color: #ffd700;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Make sure hero section has position relative for absolute positioning to work */
+.hero {
+  position: relative;
+  /* your existing hero styles */
+}
+
+/* Optional: Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .powered-by {
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+}

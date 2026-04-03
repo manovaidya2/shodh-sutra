@@ -10,6 +10,12 @@ const HeroSection = () => {
   return (
     <>
       <section className="hero">
+        {/* ================= POWERED BY (UPPER LEFT) ================= */}
+        <div className="powered-by">
+          <span className="powered-text">Powered by</span>
+          <span className="company-name">EduGlobe Services FZ-LLC</span>
+        </div>
+
         <div className="hero-content">
           <p className="highlight">1000+ Students Successfully Enrolled in PhD Programs</p>
 
@@ -46,15 +52,13 @@ const HeroSection = () => {
       {activeTab && (
         <div className="popup-overlay">
           <div className="popup-box">
-<button
-  className="popup-close"
-  onClick={closePopup}
-  aria-label="Close Popup"
->
-  <FaTimes />
-</button>
-
-
+            <button
+              className="popup-close"
+              onClick={closePopup}
+              aria-label="Close Popup"
+            >
+              <FaTimes />
+            </button>
 
             {activeTab === "honorary" && (
               <>

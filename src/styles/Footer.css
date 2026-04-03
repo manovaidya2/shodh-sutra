@@ -149,3 +149,57 @@
     font-size: 12px;
   }
 }
+
+
+
+/* Update footer-bottom to be flexible and centered */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #0a0a0a; /* or whatever your footer bg color is */
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+/* Style for powered by section */
+.powered-by-footer {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.powered-by-footer span {
+  color: #ffd700;
+  font-weight: 500;
+}
+
+/* If you want both lines in one row on desktop */
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 40px;
+  }
+  
+  .copyright-text {
+    order: 1;
+  }
+  
+  .powered-by-footer {
+    order: 2;
+  }
+}
+
+/* Optional: Adjust for very small screens */
+@media (max-width: 480px) {
+  .footer-bottom {
+    padding: 12px;
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+}
