@@ -91,6 +91,7 @@ const Header = () => {
             <a href="/mentor-form">For Mentors</a>
             <a href="/admission-partner-form">For Institutions</a>
             <a href="/university-partner-form">For Universities</a>
+
             <FaFacebookF className="social-icon" />
             <FaLinkedinIn className="social-icon" />
           </div>
@@ -123,6 +124,7 @@ const Header = () => {
             </div>
 
             <a href="/process">Process</a>
+            <a href="/associate">Associate</a>
             <a href="/discipline">Disciplines</a>
             <a href="/guide">Guides</a>
             <a href="/contact">Contact Us</a>
@@ -149,6 +151,7 @@ const Header = () => {
         <div className="sidebar-content">
           <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
           <a href="/about" onClick={() => setMenuOpen(false)}>About Us</a>
+          <a href="/associate" onClick={() => setMenuOpen(false)}>Associate</a>
           <a href="/process" onClick={() => setMenuOpen(false)}>Process</a>
           <a href="/discipline" onClick={() => setMenuOpen(false)}>Disciplines</a>
           <a href="/guide" onClick={() => setMenuOpen(false)}>Guides</a>

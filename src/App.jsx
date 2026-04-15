@@ -21,6 +21,8 @@ import Universityform from './components/UniversityAssociationForm.jsx';
 import ScholarshipForm from './components/ScholarshipForm.jsx';
 import AdmissionOfferForm from './components/PhdAdmissionForm.jsx';
 import CommonEntranceExamForm from './components/CommonEntranceExam.jsx';
+import AssociatesPage from './associate/AssociatesPage.jsx';
+import UniversityDetail from './associate/UniversityDetail.jsx';
 
 function App() {
   return (
@@ -43,7 +45,8 @@ function App() {
              <Route path="/scholarship-form" element={<ScholarshipForm />} />
              <Route path="/admissionoffer" element={<AdmissionOfferForm />} />
              <Route path="/common-entrance-exam" element={<CommonEntranceExamForm />} />
-             
+            <Route path ="/associate" element={<AssociatesPage />} />    
+            <Route path="/associates/:id" element={<UniversityDetail/>} />       
              
       </Routes>
       <Footer />
